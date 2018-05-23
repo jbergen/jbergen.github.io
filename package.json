@@ -2,7 +2,7 @@
   "name": "josephbergen.com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jbergen.github.io/",
+  "homepage": "http://jbergen.github.io/jbergen.github.io",
   "dependencies": {
     "cms-json": "^0.2.16",
     "lodash": "^4.17.4",
