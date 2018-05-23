@@ -30,10 +30,28 @@ Website
 - [React (create-react-app)](https://github.com/facebookincubator/create-react-app)
 - [cms-json](https://github.com/amelki/cms-json)
 
-## Startup
+## Development
+
+### Startup
 - `npm start`
 - `cms-json -p 3001 -d src/cms/data.json -s src/cms/schema.json`
 
+## Running as gh-page
+
+1. in `package.json` add to base level:
+```
+"homepage": "http://{username}.github.io/{repo name}",
+```
+add to scripts:
+```
+"predeploy": "npm run build",
+"deploy": "gh-pages -b master -d build"
+```
+2. If needed `npm -i gh-pages --save-dev`
+3. Duplicate master branch to another branch (e.g. `source`) and change the primary branch to that from `master`.
+4. Delete `master` branches locally and on GH
+5. `npm run deploy`
+6. Deployed!
 
 ----
 
