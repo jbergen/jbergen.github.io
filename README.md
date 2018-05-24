@@ -53,6 +53,11 @@ add to scripts:
 5. `npm run deploy`
 6. Deployed!
 
+
+## Single Page App & Routing
+
+Followed example provided by: https://github.com/rafrex/spa-github-pages
+
 ----
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
