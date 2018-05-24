@@ -30,17 +30,24 @@
             "title": "body",
             "format": "markdown"
           },
-          "image": {
+          "media": {
+            "type": "array",
+            "title": "media",
+            "items": {
+              "type": "string"
+            }
+          },
+          "has_posts_of_type": {
             "type": "string",
-            "title": "image"
+            "title": "has_posts_of_type"
           }
         }
       }
     },
-    "projects": {
+    "posts": {
       "type": "array",
       "properties": {},
-      "title": "Projects",
+      "title": "Posts",
       "items": {
         "type": "object",
         "properties": {
