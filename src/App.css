@@ -28,7 +28,6 @@
 
 .navtabbar li a.selected {
   background: transparent;
-  font-weight: 800;
 }
 
 .navtabbar li.end-tab {
@@ -40,4 +39,12 @@
 
 .navtabbar li:first-child a {
   padding-left: 20px;
+}
+
+a {
+  color: #777;
+}
+
+a:focus, a:hover {
+  color: #222;
 }
