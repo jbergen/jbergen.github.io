@@ -5,7 +5,12 @@
   "pages": [
     {
       "name": "Bio",
-      "body": "Joseph is a Native American (Navajo) visual designer and developer committed to creating beautiful, functional tools and new modes for exploring creativity through interactive media. He is currently a Senior Software Engineer at BuzzFeed building infrastructure for the future of media distribution and consumption. His training at Stanford and Harvard as an engineer and Architect have deep roots in media theory and fine arts and his work reflects a blend of the practical, interactive and whimsical. For years, he has been writing and shipping rock solid, professional grade code and working with various development teams, building everything from JavaScript-based media embeds to leading the execution of large-scale consumer iOS applications. He is as comfortable with pen and paper as he is with Xcode and Terminal. He believes that problem solving through quality user experience design is the most important aspect of product development, and this commitment has resulted in beautiful and intuitive experiences that bridge the physical and digital worlds."
+      "body": "Joseph is a Native American (Navajo) visual designer and developer committed to creating beautiful, functional tools and new modes for exploring creativity through interactive media. He is currently a Senior Software Engineer at BuzzFeed building infrastructure for the future of media distribution and consumption. His training at Stanford and Harvard as an engineer and Architect have deep roots in media theory and fine arts and his work reflects a blend of the practical, interactive and whimsical. For years, he has been writing and shipping rock solid, professional grade code and working with various development teams, building everything from JavaScript-based media embeds to leading the execution of large-scale consumer iOS applications. He is as comfortable with pen and paper as he is with Xcode and Terminal. He believes that problem solving through quality user experience design is the most important aspect of product development, and this commitment has resulted in beautiful and intuitive experiences that bridge the physical and digital worlds.",
+      "image": "thermal-portrait.jpg"
+    },
+    {
+      "name": "home",
+      "image": "clouds.jpg"
     }
   ],
   "projects": [

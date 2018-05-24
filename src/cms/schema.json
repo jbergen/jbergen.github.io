@@ -29,6 +29,10 @@
             "type": "string",
             "title": "body",
             "format": "markdown"
+          },
+          "image": {
+            "type": "string",
+            "title": "image"
           }
         }
       }

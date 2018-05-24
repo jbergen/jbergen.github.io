@@ -20,7 +20,7 @@ class App extends Component {
     }
 
     home = () => {
-        return <Home/>;
+        return <Home data={ this.state.data.pages[1] }/>;
     }
 
     work = () => {
