@@ -14,7 +14,18 @@ export default props => {
     const postList = router => {
         const posts = props.posts ? props.posts.map(post => {
             if (post.visible) {
-                return <PostListItem key={ post.slug } post={ post } router={ router }/>;
+                const postThumb = post.media ?
+                    props.allMedia.find(media => media.id === post.media[0]) :
+                    null;
+
+                return (
+                    <PostListItem
+                        key={ post.slug }
+                        post={ post }
+                        media={ postThumb }
+                        router={ router }
+                    />
+                );
             } else {
                 return null;
             }
@@ -24,13 +35,15 @@ export default props => {
             <div>
                 { images.length > 0 && images }
                 <Markdown source={ props.data.body }/>
-                { posts.length > 0 && <ul>{ posts }</ul>}
+                { posts.length > 0 &&
+                    <ul className='post-list'>{ posts }</ul>
+                }
             </div>
         );
     }
 
     const postPage = router => {
-        const post = props.posts.find(post => post.slug == router.match.params.slug)
+        const post = props.posts.find(post => post.slug === router.match.params.slug)
         const postMedia = post.media ? post.media.map(mediaId => {
             return props.allMedia.find(media => media.id === mediaId);
         }): [];

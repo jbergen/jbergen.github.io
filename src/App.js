@@ -32,7 +32,6 @@ class App extends Component {
             }): [];
 
             let component = router => {
-                console.log(router)
                 return (
                     <Page
                         data={ page }
