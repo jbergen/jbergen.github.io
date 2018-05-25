@@ -79,6 +79,34 @@
           }
         }
       }
+    },
+    "media": {
+      "type": "array",
+      "properties": {},
+      "title": "Media",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filename": {
+            "type": "string",
+            "title": "filename",
+            "description": "include file extension"
+          },
+          "title": {
+            "type": "string",
+            "title": "title"
+          },
+          "caption": {
+            "type": "string",
+            "title": "caption",
+            "format": "markdown"
+          },
+          "id": {
+            "type": "string",
+            "title": "id"
+          }
+        }
+      }
     }
   }
 }

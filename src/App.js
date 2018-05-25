@@ -6,7 +6,6 @@ import {
     NavLink
 } from 'react-router-dom'
 import data from './cms/data.json';
-import _ from 'lodash';
 import './bootstrap/css/bootstrap.min.css';
 import './App.css';
 
@@ -16,6 +15,7 @@ class App extends Component {
         this.state = {
             data: data,
             pages: data.pages,
+            media: data.media,
         };
     }
 
@@ -26,11 +26,20 @@ class App extends Component {
             let title = '';
             let slug = '/';
             let exact = false;
-            let component = () => {
+
+            const pageMedia = page.media ? page.media.map(mediaId => {
+                return this.state.media.find(media => media.id === mediaId);
+            }): [];
+
+            let component = router => {
+                console.log(router)
                 return (
                     <Page
                         data={ page }
+                        media={ pageMedia }
                         posts={ this.state.data[page.has_posts_of_type] }
+                        allMedia={ page.has_posts_of_type ? this.state.media : null }
+                        router={ router }
                     />
                 );
             };
