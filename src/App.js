@@ -55,7 +55,7 @@ class App extends Component {
             const navItem = (
                 <li key={ slug }>
                     <NavLink
-                        exact
+                        exact={ exact }
                         to={ slug }
                         activeClassName='selected'
                     >{ title }</NavLink>
