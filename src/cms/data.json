@@ -134,7 +134,15 @@
     {
       "name": "Drawing",
       "slug": "drawing",
-      "visible": true
+      "visible": true,
+      "media": [
+        "draw00",
+        "draw01",
+        "draw02",
+        "draw03",
+        "draw04",
+        "draw05"
+      ]
     },
     {
       "name": "TRANSition",
@@ -363,6 +371,30 @@
     {
       "id": "paint28",
       "filename": "paint28.jpg"
+    },
+    {
+      "filename": "draw00.jpg",
+      "id": "draw00"
+    },
+    {
+      "filename": "draw01.jpg",
+      "id": "draw01"
+    },
+    {
+      "filename": "draw02.jpg",
+      "id": "draw02.jpg"
+    },
+    {
+      "filename": "draw03.jpg",
+      "id": "draw03"
+    },
+    {
+      "filename": "draw04.jpg",
+      "id": "draw04"
+    },
+    {
+      "filename": "draw05.jpg",
+      "id": "draw05"
     }
   ]
 }

@@ -13,7 +13,7 @@ export default props => {
 
     const postList = router => {
         const posts = props.posts ? props.posts.map(post => {
-            if (post.visible) {
+            if (post.visible && post.media) {
                 const postThumb = post.media ?
                     props.allMedia.find(media => media.id === post.media[0]) :
                     null;
