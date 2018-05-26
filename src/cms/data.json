@@ -55,7 +55,13 @@
     {
       "name": "Austin Music Map",
       "slug": "austin-music-map",
-      "visible": true
+      "visible": true,
+      "media": [
+        "amm00",
+        "amm01",
+        "amm02"
+      ],
+      "body": "[austinmusicmap.com](austinmusicmap.com)\n\nNominated for a Webby award for “Best Music Site” alongside, MTV, VEVO, Pitchfork, and NPR Music.\n\nDesigner and Developer"
     },
     {
       "name": "Black Gold Boom",
@@ -87,7 +93,38 @@
     {
       "name": "Paint",
       "slug": "paint",
-      "visible": true
+      "visible": true,
+      "media": [
+        "paint00",
+        "paint01",
+        "paint02",
+        "paint03",
+        "paint04",
+        "paint05",
+        "paint06",
+        "paint07",
+        "paint08",
+        "paint09",
+        "paint10",
+        "paint11",
+        "paint12",
+        "paint13",
+        "paint14",
+        "paint15",
+        "paint16",
+        "paint17",
+        "paint18",
+        "paint19",
+        "paint20",
+        "paint21",
+        "paint22",
+        "paint23",
+        "paint24",
+        "paint25",
+        "paint26",
+        "paint27",
+        "paint28"
+      ]
     },
     {
       "name": "Mechanical Lamp",
@@ -198,6 +235,134 @@
     {
       "id": "gh06",
       "filename": "gh06.png"
+    },
+    {
+      "id": "amm00",
+      "filename": "amm00.jpg"
+    },
+    {
+      "id": "amm01",
+      "filename": "amm01.jpg"
+    },
+    {
+      "id": "amm02",
+      "filename": "amm02.jpg"
+    },
+    {
+      "id": "paint00",
+      "filename": "paint00.jpg"
+    },
+    {
+      "id": "paint01",
+      "filename": "paint01.jpg"
+    },
+    {
+      "id": "paint02",
+      "filename": "paint02.jpg"
+    },
+    {
+      "id": "paint03",
+      "filename": "paint03.jpg"
+    },
+    {
+      "id": "paint04",
+      "filename": "paint04.jpg"
+    },
+    {
+      "id": "paint05",
+      "filename": "paint05.jpg"
+    },
+    {
+      "id": "paint06",
+      "filename": "paint06.jpg"
+    },
+    {
+      "id": "paint07",
+      "filename": "paint07.jpg"
+    },
+    {
+      "id": "paint08",
+      "filename": "paint08.jpg"
+    },
+    {
+      "id": "paint09",
+      "filename": "paint09.jpg"
+    },
+    {
+      "id": "paint10",
+      "filename": "paint10.jpg"
+    },
+    {
+      "id": "paint11",
+      "filename": "paint11.jpg"
+    },
+    {
+      "id": "paint12",
+      "filename": "paint12.jpg"
+    },
+    {
+      "id": "paint13",
+      "filename": "paint13.jpg"
+    },
+    {
+      "id": "paint14",
+      "filename": "paint14.jpg"
+    },
+    {
+      "id": "paint15",
+      "filename": "paint15.jpg"
+    },
+    {
+      "id": "paint16",
+      "filename": "paint16.jpg"
+    },
+    {
+      "id": "paint17",
+      "filename": "paint17.jpg"
+    },
+    {
+      "id": "paint18",
+      "filename": "paint18.jpg"
+    },
+    {
+      "id": "paint19",
+      "filename": "paint19.jpg"
+    },
+    {
+      "id": "paint20",
+      "filename": "paint20.jpg"
+    },
+    {
+      "id": "paint21",
+      "filename": "paint21.jpg"
+    },
+    {
+      "id": "paint22",
+      "filename": "paint22.jpg"
+    },
+    {
+      "id": "paint23",
+      "filename": "paint23.jpg"
+    },
+    {
+      "id": "paint24",
+      "filename": "paint24.jpg"
+    },
+    {
+      "id": "paint25",
+      "filename": "paint25.jpg"
+    },
+    {
+      "id": "paint26",
+      "filename": "paint26.jpg"
+    },
+    {
+      "id": "paint27",
+      "filename": "paint27.jpg"
+    },
+    {
+      "id": "paint28",
+      "filename": "paint28.jpg"
     }
   ]
 }
