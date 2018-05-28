@@ -70,7 +70,17 @@
     {
       "name": "Thermal Printer",
       "slug": "thermal-printer",
-      "visible": true
+      "visible": true,
+      "media": [
+        "thermal00",
+        "thermal01",
+        "thermal02",
+        "thermal03",
+        "thermal04",
+        "thermal05",
+        "thermal06"
+      ],
+      "body": "Experiments with ephemeral physical media. Hacked thermal printers to do unexpected things like respond to a phone call or text, tell fortunes, invite you to meet someone at a party, print out a map, or become a makeshift photobooth.\n\nCustom Java library for sending commands to thermal printers written and open-sourced available on [github](https://github.com/jbergen/ESCPos-library)"
     },
     {
       "name": "Atlantic Yards",
@@ -514,6 +524,34 @@
     {
       "filename": "gt01.gif",
       "id": "gt01"
+    },
+    {
+      "filename": "thermal00.jpg",
+      "id": "thermal00"
+    },
+    {
+      "filename": "thermal01.jpg",
+      "id": "thermal01"
+    },
+    {
+      "filename": "thermal02.jpg",
+      "id": "thermal02"
+    },
+    {
+      "filename": "thermal03.jpg",
+      "id": "thermal03"
+    },
+    {
+      "filename": "thermal04.jpg",
+      "id": "thermal04"
+    },
+    {
+      "filename": "thermal05.jpg",
+      "id": "thermal05"
+    },
+    {
+      "filename": "thermal06.jpg",
+      "id": "thermal06"
     }
   ]
 }
