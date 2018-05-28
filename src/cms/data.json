@@ -172,7 +172,23 @@
     },
     {
       "name": "Pastel",
-      "slug": "pastel"
+      "slug": "pastel",
+      "media": [
+        "pastel00",
+        "pastel01",
+        "pastel02",
+        "pastel03",
+        "pastel04",
+        "pastel05",
+        "pastel06",
+        "pastel07",
+        "pastel08",
+        "pastel09",
+        "pastel10",
+        "pastel11",
+        "pastel12"
+      ],
+      "visible": true
     },
     {
       "name": "Powwow",
@@ -395,6 +411,58 @@
     {
       "filename": "draw05.jpg",
       "id": "draw05"
+    },
+    {
+      "filename": "pastel00.jpg",
+      "id": "pastel00"
+    },
+    {
+      "filename": "pastel01.jpg",
+      "id": "pastel01.jpg"
+    },
+    {
+      "filename": "pastel02.jpg",
+      "id": "pastel02"
+    },
+    {
+      "filename": "pastel03.jpg",
+      "id": "pastel03"
+    },
+    {
+      "filename": "pastel04.jpg",
+      "id": "pastel04"
+    },
+    {
+      "filename": "pastel05.jpg",
+      "id": "pastel05"
+    },
+    {
+      "filename": "pastel06.jpg",
+      "id": "pastel06"
+    },
+    {
+      "filename": "pastel07.jpg",
+      "id": "pastel07"
+    },
+    {
+      "filename": "pastel08.jpg",
+      "id": "pastel08"
+    },
+    {
+      "filename": "pastel09.jpg",
+      "id": "pastel09"
+    },
+    {
+      "filename": "pastel10.jpg",
+      "id": "pastel10"
+    },
+    {
+      "filename": "pastel11.jpg",
+      "id": "pastel11"
+    },
+    {
+      "filename": "pastel12.jpg",
+      "id": "pastel12"
     }
   ]
 }
