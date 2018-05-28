@@ -74,7 +74,17 @@
     },
     {
       "name": "Atlantic Yards",
-      "slug": "atlantic-yards"
+      "slug": "atlantic-yards",
+      "media": [
+        "ay01",
+        "ay00",
+        "ay02",
+        "ay03",
+        "ay04",
+        "ay05",
+        "ay06"
+      ],
+      "visible": true
     },
     {
       "name": "Water Footprint",
@@ -84,7 +94,12 @@
     {
       "name": "Webcam",
       "slug": "webcam",
-      "visible": true
+      "visible": true,
+      "media": [
+        "gt00",
+        "gt01"
+      ],
+      "body": "An existing website for GTECTS Architects was augmented by a live webcam feed from inside the office in Manhattan. The ultra-portable webcam is repositioned as desired and can broadcast passers by on the sidewalk, or placed inside a working model. The live feed challenges the notion of digital space and presence that has become too familiar in our everyday virtual interactions.\n\nCommissioned by Gordon Kipping of GTECTS"
     },
     {
       "name": "Houses",
@@ -463,6 +478,42 @@
     {
       "filename": "pastel12.jpg",
       "id": "pastel12"
+    },
+    {
+      "filename": "ay03.jpg",
+      "id": "ay03"
+    },
+    {
+      "filename": "ay00.jpg",
+      "id": "ay00"
+    },
+    {
+      "filename": "ay01.gif",
+      "id": "ay01"
+    },
+    {
+      "filename": "ay02.jpg",
+      "id": "ay02"
+    },
+    {
+      "filename": "ay04.jpg",
+      "id": "ay04"
+    },
+    {
+      "filename": "ay05.jpg",
+      "id": "ay05"
+    },
+    {
+      "filename": "ay06.jpg",
+      "id": "ay06"
+    },
+    {
+      "filename": "gt00.gif",
+      "id": "gt00"
+    },
+    {
+      "filename": "gt01.gif",
+      "id": "gt01"
     }
   ]
 }
