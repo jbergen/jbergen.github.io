@@ -9,6 +9,7 @@ export default props => {
 
     return (
         <div>
+            <h4>{ props.data.name }</h4>
             { images.length > 0 && images }
             <Markdown source={ props.data.body }/>
         </div>

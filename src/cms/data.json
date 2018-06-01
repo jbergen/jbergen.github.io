@@ -65,7 +65,16 @@
     },
     {
       "name": "Black Gold Boom",
-      "slug": "black-gold-boom"
+      "slug": "black-gold-boom",
+      "media": [
+        "bgb00",
+        "bgb01",
+        "bgb02",
+        "bgb03",
+        "bgb04",
+        "bgb05"
+      ],
+      "visible": true
     },
     {
       "name": "Thermal Printer",
@@ -99,7 +108,13 @@
     {
       "name": "Water Footprint",
       "slug": "water-footprint",
-      "visible": true
+      "visible": true,
+      "media": [
+        "water01",
+        "water02",
+        "water03",
+        "water04"
+      ]
     },
     {
       "name": "Webcam",
@@ -154,7 +169,14 @@
     {
       "name": "Mechanical Lamp",
       "slug": "mechanical-lamp",
-      "visible": true
+      "visible": true,
+      "media": [
+        "lamp00",
+        "lamp01",
+        "lamp02",
+        "lamp03",
+        "lamp04"
+      ]
     },
     {
       "name": "Drawing",
@@ -552,6 +574,66 @@
     {
       "filename": "thermal06.jpg",
       "id": "thermal06"
+    },
+    {
+      "filename": "bgb00.gif",
+      "id": "bgb00"
+    },
+    {
+      "filename": "bgb01.jpg",
+      "id": "bgb01"
+    },
+    {
+      "filename": "bgb02.jpg",
+      "id": "bgb02"
+    },
+    {
+      "filename": "bgb03.jpg",
+      "id": "bgb03"
+    },
+    {
+      "filename": "bgb04.jpg",
+      "id": "bgb04"
+    },
+    {
+      "filename": "bgb05.jpg",
+      "id": "bgb05"
+    },
+    {
+      "filename": "water01.jpg",
+      "id": "water01"
+    },
+    {
+      "filename": "water02.png",
+      "id": "water02"
+    },
+    {
+      "filename": "water03.png",
+      "id": "water03"
+    },
+    {
+      "filename": "water04.png",
+      "id": "water04"
+    },
+    {
+      "filename": "lamp00.gif",
+      "id": "lamp00"
+    },
+    {
+      "filename": "lamp01.png",
+      "id": "lamp01"
+    },
+    {
+      "filename": "lamp02.png",
+      "id": "lamp02"
+    },
+    {
+      "filename": "lamp03.png",
+      "id": "lamp03"
+    },
+    {
+      "filename": "lamp04.png",
+      "id": "lamp04"
     }
   ]
 }
