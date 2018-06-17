@@ -48,6 +48,12 @@ export default props => {
             return props.allMedia.find(media => media.id === mediaId);
         }): [];
 
+        document.title = `Joseph Bergen - ${ post.name }`;
+        if (window.ga) {
+            window.ga('set', 'page', props.router.location.pathname);
+            window.ga('send', 'pageview');
+        }
+
         return (
             <Post
                 data={ post }

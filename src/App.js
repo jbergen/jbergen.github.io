@@ -32,6 +32,15 @@ class App extends Component {
             }): [];
 
             let component = router => {
+                if (router.match.isExact) {
+
+                    document.title = `Joseph Bergen - ${ page.name }`;
+                    if (window.ga) {
+                        window.ga('set', 'page', router.location.pathname);
+                        window.ga('send', 'pageview');
+                    }
+                }
+
                 return (
                     <Page
                         data={ page }
