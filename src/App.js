@@ -31,6 +31,15 @@ class App extends Component {
                 return this.state.media.find(media => media.id === mediaId);
             }): [];
 
+            const gridMedia = (() => {
+                if (page.has_media_grid) {
+                    return this.state.media.filter(media => {
+                        return media.include_in_feed_grid;
+                    });
+                }
+                return [];
+            })();
+
             let component = router => {
                 if (router.match.isExact) {
 
@@ -45,6 +54,7 @@ class App extends Component {
                     <Page
                         data={ page }
                         media={ pageMedia }
+                        gridMedia={gridMedia}
                         posts={ this.state.data[page.has_posts_of_type] }
                         allMedia={ page.has_posts_of_type ? this.state.media : null }
                         router={ router }

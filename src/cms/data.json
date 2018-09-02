@@ -6,9 +6,8 @@
     {
       "name": "home",
       "body": "",
-      "media": [
-        "indiancentaur"
-      ]
+      "media": [],
+      "has_media_grid": true
     },
     {
       "name": "work",

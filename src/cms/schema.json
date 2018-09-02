@@ -40,6 +40,11 @@
           "has_posts_of_type": {
             "type": "string",
             "title": "has_posts_of_type"
+          },
+          "has_media_grid": {
+            "type": "boolean",
+            "title": "Has Media Grid",
+            "description": "shows grid of media"
           }
         }
       }

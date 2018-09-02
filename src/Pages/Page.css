@@ -7,6 +7,25 @@ img {
     padding: 0;
     margin: 0;
     list-style: none;
+    max-width: 650px;
+}
+
+@media only screen and (orientation: landscape) {
+    .post-list {
+        width: 70%;
+    }
+}
+
+.width-constrained {
+    width: 70%;
+    max-width: 650px;
+}
+
+@media only screen and (orientation: portrait) {
+    .width-constrained {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .post-list li {
@@ -19,4 +38,40 @@ img {
     height: 200px;
     background-position: center;
     background-size: 100%;
+}
+
+.media-grid {
+    list-style: none;
+    padding: 0;
+}
+
+.media-grid li {
+    height: 200px;
+    width: 200px;
+    float: left;
+    position: relative;
+    margin: 10px;
+}
+
+@media only screen and (orientation: portrait) {
+    .media-grid li {
+        height: auto;
+        width: calc(50% - 20px);
+        padding-bottom: calc(50% - 20px);
+        float: left;
+        position: relative;
+        margin: 10px;
+    }
+}
+
+.media-grid li img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
 }

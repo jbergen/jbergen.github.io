@@ -8,7 +8,7 @@ export default props => {
     });
 
     return (
-        <div>
+        <div className='post-wrapper width-constrained'>
             <h4>{ props.data.name }</h4>
             { images.length > 0 && images }
             <Markdown source={ props.data.body }/>

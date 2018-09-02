@@ -1,6 +1,5 @@
 .container {
   margin-top: 50px;
-  max-width: 650px;
   margin-bottom: 20px
 }
 
@@ -49,12 +48,4 @@ a {
 
 a:focus, a:hover {
   color: #222;
-}
-
-@media only screen and (orientation: landscape) {
-  .container {
-    width: 70%;
-    left: 0;
-    position: absolute;
-  }
 }
