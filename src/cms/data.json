@@ -250,12 +250,23 @@
     {
       "filename": "clouds.jpg",
       "title": "Clouds",
-      "id": "clouds"
+      "id": "clouds",
+      "year": "2007",
+      "media": "Aerosol on Canvas",
+      "dimension": "48\" x 36\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "canvas"
+      ]
     },
     {
       "filename": "thermal-portrait.jpg",
       "title": "Thermal Portrait",
-      "id": "thermal-portrait"
+      "id": "thermal-portrait",
+      "year": "2013",
+      "media": "Thermal Paper",
+      "include_in_feed_grid": true
     },
     {
       "id": "gopopanimated",
@@ -642,19 +653,46 @@
       "filename": "IndianCentaur.jpg",
       "title": "Indian Centaur",
       "caption": "Oil on Canvas, 36\" x 24\"",
-      "id": "indiancentaur"
+      "id": "indiancentaur",
+      "year": "2018",
+      "media": "Oil on Canvas",
+      "dimension": "35\" x 24\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "oil",
+        "canvas"
+      ]
     },
     {
       "filename": "GenCrook.JPG",
       "title": "General Crook",
       "caption": "Oil on Panel, 12\" x 12\"",
-      "id": "generalcrook"
+      "id": "generalcrook",
+      "year": "2018",
+      "media": "Oil on Panel",
+      "dimension": "12\" x 12\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "oil",
+        "panel"
+      ]
     },
     {
       "filename": "LakotaWomen.jpg",
       "title": "Lakota Women",
       "caption": "Oil on Canvas, 30\" x 40\"",
-      "id": "lakotawomen"
+      "id": "lakotawomen",
+      "year": "2018",
+      "media": "Oil on Canvas",
+      "dimension": "30\" x 40\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "oil",
+        "canvas"
+      ]
     }
   ]
 }

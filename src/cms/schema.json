@@ -104,6 +104,31 @@
           "id": {
             "type": "string",
             "title": "id"
+          },
+          "year": {
+            "type": "string",
+            "title": "Year",
+            "description": "date completed"
+          },
+          "media": {
+            "type": "string",
+            "title": "Media"
+          },
+          "dimension": {
+            "type": "string",
+            "title": "Dimension",
+            "description": "H x W x D"
+          },
+          "include_in_feed_grid": {
+            "type": "boolean",
+            "title": "Include in feed grid"
+          },
+          "tags": {
+            "type": "array",
+            "title": "Tags",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }
