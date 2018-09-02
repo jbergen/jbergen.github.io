@@ -7,7 +7,7 @@
       "name": "home",
       "body": "",
       "media": [
-        "clouds"
+        "indiancentaur"
       ]
     },
     {
@@ -24,6 +24,45 @@
   ],
   "posts": [
     {
+      "name": "Paint",
+      "slug": "paint",
+      "visible": true,
+      "media": [
+        "indiancentaur",
+        "lakotawomen",
+        "generalcrook",
+        "paint00",
+        "paint01",
+        "paint02",
+        "paint03",
+        "paint04",
+        "paint05",
+        "paint06",
+        "paint07",
+        "paint08",
+        "paint09",
+        "paint10",
+        "paint11",
+        "paint12",
+        "paint13",
+        "paint14",
+        "paint15",
+        "paint16",
+        "paint17",
+        "paint18",
+        "paint19",
+        "paint20",
+        "paint21",
+        "paint22",
+        "paint23",
+        "paint24",
+        "paint25",
+        "paint26",
+        "paint27",
+        "paint28"
+      ]
+    },
+    {
       "name": "Gearhead",
       "slug": "gearhead-app",
       "media": [
@@ -37,20 +76,6 @@
       ],
       "body": "[gearheadapp.co](http://gearheadapp.co)\n\nGearhead is the easiest, fastest, and most stunning way to keep track of your car or motorcycle's maintenance, repairs, and fuel economy.\n\nYou're proud of your vehicle, so show it off while recording routine upkeep with a sleek modern interface designed for quick scanning and updating. Put away your pen and paper and use Gearhead everytime you fill-up at the gas station and track how your vehicle performs over time. Add your own service items and quickly see what services need to be performed, which ones are coming due, and keep your vehicle in tip-top shape!\n\nJoseph conceived of Gearhead after being frustrated with the existing options for keeping track of maintenance and fuel records for his two vintage motorcycles. Gearhead's powerful record keeping functionality is complemented by a simple and elegant interface which puts all your records right at your fingertips.",
       "visible": true
-    },
-    {
-      "name": "GoPop",
-      "slug": "gopop",
-      "visible": true,
-      "media": [
-        "gopopanimated",
-        "gopop00",
-        "gopop01",
-        "gopop02",
-        "gopop03",
-        "gopop04"
-      ],
-      "body": "[gopop.co](http://gopop.co)\n\nGoPop is a completely new way to speak in GIFs, photos, videos and drawings. Featured by Apple as a “Best New App,” and Mashable has called GoPop an “app not to miss.” Backed by Lowercase Capital, Advancit Capital, SV Angel, Matter Ventures and the Knight Enterprise Fund.\n\nReleased in February 2014, Joseph was Head Product Architect of the iOS app GoPop. Designing the UI/UX as well as the underlying code for the iOS code in both Objective-C and more recently Swift."
     },
     {
       "name": "Austin Music Map",
@@ -92,18 +117,18 @@
       "body": "Experiments with ephemeral physical media. Hacked thermal printers to do unexpected things like respond to a phone call or text, tell fortunes, invite you to meet someone at a party, print out a map, or become a makeshift photobooth.\n\nCustom Java library for sending commands to thermal printers written and open-sourced available on [github](https://github.com/jbergen/ESCPos-library)"
     },
     {
-      "name": "Atlantic Yards",
-      "slug": "atlantic-yards",
+      "name": "GoPop",
+      "slug": "gopop",
+      "visible": true,
       "media": [
-        "ay01",
-        "ay00",
-        "ay02",
-        "ay03",
-        "ay04",
-        "ay05",
-        "ay06"
+        "gopopanimated",
+        "gopop00",
+        "gopop01",
+        "gopop02",
+        "gopop03",
+        "gopop04"
       ],
-      "visible": true
+      "body": "[gopop.co](http://gopop.co)\n\nGoPop is a completely new way to speak in GIFs, photos, videos and drawings. Featured by Apple as a “Best New App,” and Mashable has called GoPop an “app not to miss.” Backed by Lowercase Capital, Advancit Capital, SV Angel, Matter Ventures and the Knight Enterprise Fund.\n\nReleased in February 2014, Joseph was Head Product Architect of the iOS app GoPop. Designing the UI/UX as well as the underlying code for the iOS code in both Objective-C and more recently Swift."
     },
     {
       "name": "Water Footprint",
@@ -131,40 +156,18 @@
       "slug": "houses"
     },
     {
-      "name": "Paint",
-      "slug": "paint",
-      "visible": true,
+      "name": "Atlantic Yards",
+      "slug": "atlantic-yards",
       "media": [
-        "paint00",
-        "paint01",
-        "paint02",
-        "paint03",
-        "paint04",
-        "paint05",
-        "paint06",
-        "paint07",
-        "paint08",
-        "paint09",
-        "paint10",
-        "paint11",
-        "paint12",
-        "paint13",
-        "paint14",
-        "paint15",
-        "paint16",
-        "paint17",
-        "paint18",
-        "paint19",
-        "paint20",
-        "paint21",
-        "paint22",
-        "paint23",
-        "paint24",
-        "paint25",
-        "paint26",
-        "paint27",
-        "paint28"
-      ]
+        "ay01",
+        "ay00",
+        "ay02",
+        "ay03",
+        "ay04",
+        "ay05",
+        "ay06"
+      ],
+      "visible": true
     },
     {
       "name": "Mechanical Lamp",
@@ -445,7 +448,7 @@
     },
     {
       "filename": "draw02.jpg",
-      "id": "draw02.jpg"
+      "id": "draw02"
     },
     {
       "filename": "draw03.jpg",
@@ -465,7 +468,7 @@
     },
     {
       "filename": "pastel01.jpg",
-      "id": "pastel01.jpg"
+      "id": "pastel01"
     },
     {
       "filename": "pastel02.jpg",
@@ -496,19 +499,19 @@
       "id": "pastel08"
     },
     {
-      "filename": "pastel09.jpg",
+      "filename": "pastel09.png",
       "id": "pastel09"
     },
     {
-      "filename": "pastel10.jpg",
+      "filename": "pastel10.png",
       "id": "pastel10"
     },
     {
-      "filename": "pastel11.jpg",
+      "filename": "pastel11.png",
       "id": "pastel11"
     },
     {
-      "filename": "pastel12.jpg",
+      "filename": "pastel12.png",
       "id": "pastel12"
     },
     {
@@ -634,6 +637,24 @@
     {
       "filename": "lamp04.png",
       "id": "lamp04"
+    },
+    {
+      "filename": "IndianCentaur.jpg",
+      "title": "Indian Centaur",
+      "caption": "Oil on Canvas, 36\" x 24\"",
+      "id": "indiancentaur"
+    },
+    {
+      "filename": "GenCrook.JPG",
+      "title": "General Crook",
+      "caption": "Oil on Panel, 12\" x 12\"",
+      "id": "generalcrook"
+    },
+    {
+      "filename": "LakotaWomen.jpg",
+      "title": "Lakota Women",
+      "caption": "Oil on Canvas, 30\" x 40\"",
+      "id": "lakotawomen"
     }
   ]
 }

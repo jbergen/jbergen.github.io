@@ -11,7 +11,7 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "cms-json": "0.2.17",
+    "cms-json": "^0.2.17",
     "gh-pages": "^1.1.0",
     "react-scripts": "1.0.17"
   },
