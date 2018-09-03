@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>http://jbergen.github.io/home</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/indiancentaur</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/IndianCentaur.jpg</image:loc>
+      <image:title>Indian Centaur</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/generalcrook</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/GenCrook.JPG</image:loc>
+      <image:title>General Crook</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/lakotawomen</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/LakotaWomen.jpg</image:loc>
+      <image:title>Lakota Women</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/clouds</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/clouds.jpg</image:loc>
+      <image:title>Clouds</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/lga1</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/paint01.jpg</image:loc>
+      <image:title>LGA 1</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/lga2</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/paint09.jpg</image:loc>
+      <image:title>LGA 2</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/lga3</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/paint10.jpg</image:loc>
+      <image:title>LGA 3</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/thermalportrait</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/thermal05.jpg</image:loc>
+      <image:title>Thermal Portrait</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/springfield</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/paint04.jpg</image:loc>
+      <image:title>Springfield</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/media/soma</loc>
+    <image:image>
+      <image:loc>http://jbergen.github.io/static/media/paint11.jpg</image:loc>
+      <image:title>SOMA</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/about</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Paint</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Houses</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Drawing</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Lodged House</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Door</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Teardrop</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Chongqing</loc>
+  </url>
+  <url>
+    <loc>http://jbergen.github.io/work/Pastel</loc>
+  </url>
+</urlset>
