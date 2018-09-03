@@ -5,11 +5,23 @@ import { Link } from 'react-router-dom'
 import './Page.css';
 
 export default class ModularPage extends Component {
-    pageImages = (page, data) => {
-        const pageMedia = page.media ? page.media.map(mediaId => {
-            return data.media.find(media => media.id === mediaId);
-        }): [];
+    pageMedia = (page, data) => {
+        if (!page.media) { return []; }
+        const pageMedia = [];
+        page.media.forEach(mediaId => {
+            let m = data.media.find(media => media.id === mediaId)
+            if (m) {
+                pageMedia.push(m);
+            } else {
+                console.log("MISSING MEDIA FOR MODULAR PAGE:", mediaId);
+            }
+        });
+        return pageMedia
+    }
 
+    pageImages = (page, data) => {
+        const pageMedia = this.pageMedia(page, data);
+        
         return pageMedia.map(media => {
             const imgURL = require(`../media/${ media.filename }`)
             return <img key={ imgURL } src={ imgURL } alt={ imgURL }/>
@@ -18,12 +30,10 @@ export default class ModularPage extends Component {
 
     gridItems = (page, data, router) => {
         if (!page.has_media_grid) { return []; }
-        const pageMedia = page.media ? page.media.map(mediaId => {
-            return data.media.find(media => media.id === mediaId);
-        }): [];
+        const pageMedia = this.pageMedia(page, data);
 
         return pageMedia.map(media => {
-            const imgURL = require(`../media/${ media.filename }`)
+            const imgURL = require(`../media/${media.filename}`)
             return (
                 <li key={media.id}>
                     <Link to={`${router.match.path}media/${media.id}`}>

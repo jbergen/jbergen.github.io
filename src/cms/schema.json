@@ -132,10 +132,6 @@
             "title": "Dimension",
             "description": "H x W x D"
           },
-          "include_in_feed_grid": {
-            "type": "boolean",
-            "title": "Include in feed grid"
-          },
           "tags": {
             "type": "array",
             "title": "Tags",

@@ -5,10 +5,17 @@ export default props => {
     const { media, data } = props;
     const imgURL = require(`../media/${ media.filename }`)
     const img = <img key={ imgURL } src={ imgURL } alt={ imgURL }/>
+    const homePage = data.pages.find(p => p.name === 'home');
 
-    const gridMedia = data.media.filter(media => {
-        return media.include_in_feed_grid;
-    });
+    const gridMedia = [];
+    homePage.media.forEach(mediaId => {
+        let media = data.media.find(m => mediaId === m.id);
+        if (media) {
+            gridMedia.push(media);
+        } else {
+            console.log("COULD NOT FIND MEDIA FOR GRID:", mediaId)
+        }
+    })
 
     const mediaIndex = (() => {
         for (var i = 0; i < gridMedia.length; i++) {

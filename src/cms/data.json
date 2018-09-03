@@ -10,13 +10,13 @@
         "indiancentaur",
         "generalcrook",
         "lakotawomen",
-        "paint01",
         "clouds",
-        "paint09",
-        "thermal05",
-        "paint04",
-        "paint10",
-        "paint11"
+        "lga1",
+        "lga2",
+        "lga3",
+        "thermalportrait",
+        "springfield",
+        "soma"
       ],
       "has_media_grid": true
     },
@@ -126,8 +126,7 @@
         "thermal02",
         "thermal03",
         "thermal04",
-        "thermal05",
-        "thermal06"
+        "thermalportrait"
       ],
       "body": "Experiments with ephemeral physical media. Hacked thermal printers to do unexpected things like respond to a phone call or text, tell fortunes, invite you to meet someone at a party, print out a map, or become a makeshift photobooth.\n\nCustom Java library for sending commands to thermal printers written and open-sourced available on [github](https://github.com/jbergen/ESCPos-library)"
     },
@@ -270,7 +269,6 @@
       "year": "2018",
       "media": "Oil on Canvas",
       "dimension": "35\" x 24\"",
-      "include_in_feed_grid": true,
       "tags": [
         "painting",
         "oil",
@@ -285,7 +283,6 @@
       "year": "2018",
       "media": "Oil on Panel",
       "dimension": "12\" x 12\"",
-      "include_in_feed_grid": true,
       "tags": [
         "painting",
         "oil",
@@ -300,7 +297,6 @@
       "year": "2018",
       "media": "Oil on Canvas",
       "dimension": "30\" x 40\"",
-      "include_in_feed_grid": true,
       "tags": [
         "painting",
         "oil",
@@ -314,7 +310,6 @@
       "year": "2007",
       "media": "Aerosol on Canvas",
       "dimension": "48\" x 36\"",
-      "include_in_feed_grid": true,
       "tags": [
         "painting",
         "canvas"
@@ -325,8 +320,7 @@
       "title": "Thermal Portrait",
       "id": "thermal-portrait",
       "year": "2013",
-      "media": "Thermal Paper",
-      "include_in_feed_grid": true
+      "media": "Thermal Paper"
     },
     {
       "id": "gopopanimated",
@@ -398,8 +392,12 @@
       "filename": "paint00.jpg"
     },
     {
-      "id": "paint01",
-      "filename": "paint01.jpg"
+      "id": "lga1",
+      "filename": "paint01.jpg",
+      "title": "LGA 1",
+      "year": "2007",
+      "media": "Oil on Canvas",
+      "dimension": "16\" x 16\""
     },
     {
       "id": "paint02",
@@ -410,8 +408,12 @@
       "filename": "paint03.jpg"
     },
     {
-      "id": "paint04",
-      "filename": "paint04.jpg"
+      "id": "springfield",
+      "filename": "paint04.jpg",
+      "year": "2014",
+      "media": "Oil on Panel",
+      "dimension": "12\" x 12\"",
+      "title": "Springfield"
     },
     {
       "id": "paint05",
@@ -430,16 +432,28 @@
       "filename": "paint08.jpg"
     },
     {
-      "id": "paint09",
-      "filename": "paint09.jpg"
+      "id": "lga2",
+      "filename": "paint09.jpg",
+      "title": "LGA 2",
+      "year": "2011",
+      "media": "Oil on Canvas",
+      "dimension": "12\" x 12\""
     },
     {
-      "id": "paint10",
-      "filename": "paint10.jpg"
+      "id": "lga3",
+      "filename": "paint10.jpg",
+      "title": "LGA 3",
+      "year": "2011",
+      "media": "Oil on Panel",
+      "dimension": "12\" x 12\""
     },
     {
-      "id": "paint11",
-      "filename": "paint11.jpg"
+      "id": "soma",
+      "filename": "paint11.jpg",
+      "title": "SOMA",
+      "year": "2015",
+      "media": "Oil on Panel",
+      "dimension": "12\" x 12\""
     },
     {
       "id": "paint12",
@@ -639,7 +653,10 @@
     },
     {
       "filename": "thermal05.jpg",
-      "id": "thermal05"
+      "id": "thermalportrait",
+      "media": "Thermal paper",
+      "year": "2012",
+      "title": "Thermal Portrait"
     },
     {
       "filename": "thermal06.jpg",

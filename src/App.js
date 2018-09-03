@@ -6,6 +6,7 @@ import {
     BrowserRouter as Router,
     Route,
     Redirect,
+    Switch,
 } from 'react-router-dom';
 import data from './cms/data.json';
 import pageView from './pageView';
@@ -21,8 +22,12 @@ class App extends Component {
     renderMediaPage = router => {
         const { data } = this.state;
         const media = data.media.find(media => media.id === router.match.params.id)
-        pageView(media.title, router.location.pathname);
-        return <Media media={media} data={this.state.data}/>;
+        if (media) {
+            pageView(media.title, router.location.pathname);
+            return <Media media={media} data={this.state.data}/>;
+        } else {
+            return <Redirect to='/'/>;
+        }
     }
 
     render() {
@@ -60,11 +65,14 @@ class App extends Component {
                         siteTitle={this.state.data.site_info.title}
                         pages={this.state.data.pages}
                     />
-                    {pageRoutes}
-                    <Route
-                        path={`/media/:id`}
-                        render={this.renderMediaPage}
-                    />
+                    <Switch>
+                        {pageRoutes}
+                        <Route
+                            path={`/media/:id`}
+                            render={this.renderMediaPage}
+                        />
+                        <Route render={() => (<Redirect to='/'/>)}/>
+                    </Switch>
                 </div>
             </Router>
         );
