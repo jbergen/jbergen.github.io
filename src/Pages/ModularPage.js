@@ -17,14 +17,11 @@ export default class ModularPage extends Component {
     }
 
     gridItems = (page, data, router) => {
-        const gridMedia = (() => {
-            if (!page.has_media_grid) { return []; }
-            return data.media.filter(media => {
-                return media.include_in_feed_grid;
-            });
-        })();
+        const pageMedia = page.media ? page.media.map(mediaId => {
+            return data.media.find(media => media.id === mediaId);
+        }): [];
 
-        return gridMedia.map(media => {
+        return pageMedia.map(media => {
             const imgURL = require(`../media/${ media.filename }`)
             return (
                 <li key={media.id}>
@@ -63,12 +60,15 @@ export default class ModularPage extends Component {
         const images = this.pageImages(page, data);
         const childPosts = this.posts(page, data, router);
         const gridItems = this.gridItems(page, data, router);
-
+        const showImageList = !gridItems.length
+        
         return (
             <div>
-                <div className='width-constrained'>
-                    { images.length > 0 && images }
-                </div>
+                {showImageList &&
+                    <div className='width-constrained'>
+                        { images.length > 0 && images }
+                    </div>
+                }
                 <Markdown
                     className='width-constrained'
                     source={page.body}

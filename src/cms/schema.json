@@ -45,6 +45,14 @@
             "type": "boolean",
             "title": "Has Media Grid",
             "description": "shows grid of media"
+          },
+          "hide_in_nav": {
+            "type": "boolean",
+            "title": "hide in nav"
+          },
+          "redirect": {
+            "type": "string",
+            "title": "redirect"
           }
         }
       }

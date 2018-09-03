@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom'
 export default class Navbar extends Component {
     render() {
         const navItems = this.props.pages.map(page => {
+            if (page.hide_in_nav) { return null; }
+            
             let title = '';
             let slug = '/';
             let exact = false;

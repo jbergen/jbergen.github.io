@@ -6,7 +6,6 @@ import {
     BrowserRouter as Router,
     Route,
     Redirect,
-    NavLink
 } from 'react-router-dom';
 import data from './cms/data.json';
 import './bootstrap/css/bootstrap.min.css';
@@ -21,16 +20,18 @@ class App extends Component {
     renderMediaPage = router => {
         const { data } = this.state;
         const media = data.media.find(media => media.id === router.match.params.id)
-        console.log("RMP", data, media)
-        return <Media media={media}/>;
+        return <Media media={media} data={this.state.data}/>;
     }
 
     render() {
         const pageRoutes = this.state.data.pages.map(page => {
             const path = page.name === 'home' ? '/' : `/${page.name}`;
-            const exact = page.name === 'home';
+            const exact = page.name === 'home' || !!page.redirect;
 
             const component = router => {
+                if (page.redirect) {
+                    return <Redirect to={page.redirect}/>;
+                }
                 return (
                     <Page
                         page={page}
@@ -42,9 +43,9 @@ class App extends Component {
 
             return (
                 <Route
-                    key={ path }
-                    exact={ exact }
-                    path={ path }
+                    key={path}
+                    exact={exact}
+                    path={path}
                     render={component}
                 />
             );
@@ -58,12 +59,6 @@ class App extends Component {
                         pages={this.state.data.pages}
                     />
                     {pageRoutes}
-                    <Route
-                        key={'media'}
-                        exact={true}
-                        path={'/media'}
-                        render={() => <Redirect to="/"/>}
-                    />
                     <Route
                         path={`/media/:id`}
                         render={this.renderMediaPage}

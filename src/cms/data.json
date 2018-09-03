@@ -6,7 +6,18 @@
     {
       "name": "home",
       "body": "",
-      "media": [],
+      "media": [
+        "indiancentaur",
+        "generalcrook",
+        "lakotawomen",
+        "paint01",
+        "clouds",
+        "paint09",
+        "thermal05",
+        "paint04",
+        "paint10",
+        "paint11"
+      ],
       "has_media_grid": true
     },
     {
@@ -19,13 +30,18 @@
       "media": [
         "thermal-portrait"
       ]
+    },
+    {
+      "name": "media",
+      "hide_in_nav": true,
+      "redirect": "/"
     }
   ],
   "posts": [
     {
       "name": "Paint",
       "slug": "paint",
-      "visible": true,
+      "visible": false,
       "media": [
         "indiancentaur",
         "lakotawomen",
@@ -183,7 +199,7 @@
     {
       "name": "Drawing",
       "slug": "drawing",
-      "visible": true,
+      "visible": false,
       "media": [
         "draw00",
         "draw01",
@@ -237,7 +253,7 @@
         "pastel11",
         "pastel12"
       ],
-      "visible": true
+      "visible": false
     },
     {
       "name": "Powwow",
@@ -246,6 +262,51 @@
     }
   ],
   "media": [
+    {
+      "filename": "IndianCentaur.jpg",
+      "title": "Indian Centaur",
+      "caption": "Oil on Canvas, 36\" x 24\"",
+      "id": "indiancentaur",
+      "year": "2018",
+      "media": "Oil on Canvas",
+      "dimension": "35\" x 24\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "oil",
+        "canvas"
+      ]
+    },
+    {
+      "filename": "GenCrook.JPG",
+      "title": "General Crook",
+      "caption": "Oil on Panel, 12\" x 12\"",
+      "id": "generalcrook",
+      "year": "2018",
+      "media": "Oil on Panel",
+      "dimension": "12\" x 12\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "oil",
+        "panel"
+      ]
+    },
+    {
+      "filename": "LakotaWomen.jpg",
+      "title": "Lakota Women",
+      "caption": "Oil on Canvas, 30\" x 40\"",
+      "id": "lakotawomen",
+      "year": "2018",
+      "media": "Oil on Canvas",
+      "dimension": "30\" x 40\"",
+      "include_in_feed_grid": true,
+      "tags": [
+        "painting",
+        "oil",
+        "canvas"
+      ]
+    },
     {
       "filename": "clouds.jpg",
       "title": "Clouds",
@@ -473,10 +534,6 @@
       "id": "draw05"
     },
     {
-      "filename": "pastel00.jpg",
-      "id": "pastel00"
-    },
-    {
       "filename": "pastel01.jpg",
       "id": "pastel01"
     },
@@ -649,49 +706,8 @@
       "id": "lamp04"
     },
     {
-      "filename": "IndianCentaur.jpg",
-      "title": "Indian Centaur",
-      "caption": "Oil on Canvas, 36\" x 24\"",
-      "id": "indiancentaur",
-      "year": "2018",
-      "media": "Oil on Canvas",
-      "dimension": "35\" x 24\"",
-      "include_in_feed_grid": true,
-      "tags": [
-        "painting",
-        "oil",
-        "canvas"
-      ]
-    },
-    {
-      "filename": "GenCrook.JPG",
-      "title": "General Crook",
-      "caption": "Oil on Panel, 12\" x 12\"",
-      "id": "generalcrook",
-      "year": "2018",
-      "media": "Oil on Panel",
-      "dimension": "12\" x 12\"",
-      "include_in_feed_grid": true,
-      "tags": [
-        "painting",
-        "oil",
-        "panel"
-      ]
-    },
-    {
-      "filename": "LakotaWomen.jpg",
-      "title": "Lakota Women",
-      "caption": "Oil on Canvas, 30\" x 40\"",
-      "id": "lakotawomen",
-      "year": "2018",
-      "media": "Oil on Canvas",
-      "dimension": "30\" x 40\"",
-      "include_in_feed_grid": true,
-      "tags": [
-        "painting",
-        "oil",
-        "canvas"
-      ]
+      "filename": "pastel00.jpg",
+      "id": "pastel00"
     }
   ]
 }
