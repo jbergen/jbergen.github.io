@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import Navbar from './Navbar';
 import Page from './Pages/Page';
+import Media from './Pages/Media';
 import {
     BrowserRouter as Router,
     Route,
+    Redirect,
     NavLink
-} from 'react-router-dom'
+} from 'react-router-dom';
 import data from './cms/data.json';
 import './bootstrap/css/bootstrap.min.css';
 import './App.css';
@@ -12,97 +15,59 @@ import './App.css';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            data: data,
-            pages: data.pages,
-            media: data.media,
-        };
+        this.state = { data: data };
+    }
+
+    renderMediaPage = router => {
+        const { data } = this.state;
+        const media = data.media.find(media => media.id === router.match.params.id)
+        console.log("RMP", data, media)
+        return <Media media={media}/>;
     }
 
     render() {
-        let navItems = [];
-        let routes = [];
-        this.state.pages.forEach(page => {
-            let title = '';
-            let slug = '/';
-            let exact = false;
+        const pageRoutes = this.state.data.pages.map(page => {
+            const path = page.name === 'home' ? '/' : `/${page.name}`;
+            const exact = page.name === 'home';
 
-            const pageMedia = page.media ? page.media.map(mediaId => {
-                return this.state.media.find(media => media.id === mediaId);
-            }): [];
-
-            const gridMedia = (() => {
-                if (page.has_media_grid) {
-                    return this.state.media.filter(media => {
-                        return media.include_in_feed_grid;
-                    });
-                }
-                return [];
-            })();
-
-            let component = router => {
-                if (router.match.isExact) {
-
-                    document.title = `Joseph Bergen - ${ page.name }`;
-                    if (window.ga) {
-                        window.ga('set', 'page', router.location.pathname);
-                        window.ga('send', 'pageview');
-                    }
-                }
-
+            const component = router => {
                 return (
                     <Page
-                        data={ page }
-                        media={ pageMedia }
-                        gridMedia={gridMedia}
-                        posts={ this.state.data[page.has_posts_of_type] }
-                        allMedia={ page.has_posts_of_type ? this.state.media : null }
-                        router={ router }
+                        page={page}
+                        data={this.state.data}
+                        router={router}
                     />
                 );
             };
 
-            if (page.name === 'home') {
-                title = this.state.data.site_info.title;
-                exact = true;
-            } else {
-                title = page.name;
-                slug = `/${ page.name }`;
-            }
-
-            const navItem = (
-                <li key={ slug }>
-                    <NavLink
-                        exact={ exact }
-                        to={ slug }
-                        activeClassName='selected'
-                    >{ title }</NavLink>
-                </li>
-            );
-            navItems.push(navItem);
-
-            const route = (
+            return (
                 <Route
-                    key={ slug }
+                    key={ path }
                     exact={ exact }
-                    path={ slug }
-                    component={ component }
+                    path={ path }
+                    render={component}
                 />
             );
-            routes.push(route);
         });
 
         return (
             <Router>
                 <div className='container'>
-                    <header className='navtabbar'>
-                        <ul>
-                            { navItems }
-                            <li className='end-tab'>&nbsp;</li>
-                        </ul>
-                    </header>
-
-                    { routes }
+                    <Navbar
+                        siteTitle={this.state.data.site_info.title}
+                        pages={this.state.data.pages}
+                    />
+                    {pageRoutes}
+                    <Route
+                        key={'media'}
+                        exact={true}
+                        path={'/media'}
+                        render={() => <Redirect to="/"/>}
+                    />
+                    <Route
+                        path={`/media/:id`}
+                        render={this.renderMediaPage}
+                    />
                 </div>
             </Router>
         );
