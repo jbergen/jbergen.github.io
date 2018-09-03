@@ -50,8 +50,8 @@ add to scripts:
 2. If needed `npm -i gh-pages --save-dev`
 3. Duplicate master branch to another branch (e.g. `source`) and change the primary branch to that from `master`.
 4. Delete `master` branches locally and on GH
-5. `npm run deploy`
-6. Deployed!
+5. `npm run publish`
+6. Published!
 
 
 ## Single Page App & Routing
