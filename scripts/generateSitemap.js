@@ -7,7 +7,7 @@ const data = JSON.parse(dataString);
 
 const sitemapArray = [];
 sitemapArray.push('<?xml version="1.0" encoding="UTF-8"?>');
-sitemapArray.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
+sitemapArray.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">');
 
 data.pages.forEach(page => {
     if (!page.hide_in_nav) {
