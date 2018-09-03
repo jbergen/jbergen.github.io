@@ -17,6 +17,7 @@ export default class ModularPage extends Component {
     }
 
     gridItems = (page, data, router) => {
+        if (!page.has_media_grid) { return []; }
         const pageMedia = page.media ? page.media.map(mediaId => {
             return data.media.find(media => media.id === mediaId);
         }): [];
@@ -61,7 +62,7 @@ export default class ModularPage extends Component {
         const childPosts = this.posts(page, data, router);
         const gridItems = this.gridItems(page, data, router);
         const showImageList = !gridItems.length
-        
+
         return (
             <div>
                 {showImageList &&

@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import Post from './Post';
 import ModularPage from './ModularPage';
+import pageView from './../pageView';
 import { Route, Switch } from 'react-router-dom'
 import './Page.css';
 
 export default class Page extends Component {
     renderPostList = router => {
         const { page, data } = this.props;
+        pageView(page.name, router.location.pathname);
         return <ModularPage page={page} data={data} router={router}/>;
     }
 
     renderPostPage = router => {
         const { data } = this.props;
         const post = data.posts.find(post => post.slug === router.match.params.slug)
-
-        document.title = `Joseph Bergen - ${ post.name }`;
-        if (window.ga) {
-            window.ga('set', 'page', this.props.router.location.pathname);
-            window.ga('send', 'pageview');
-        }
-
+        pageView(post.name, router.location.pathname);
         return (
             <Post post={post} data={this.props.data}/>
         );

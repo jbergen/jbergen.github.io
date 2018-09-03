@@ -8,6 +8,7 @@ import {
     Redirect,
 } from 'react-router-dom';
 import data from './cms/data.json';
+import pageView from './pageView';
 import './bootstrap/css/bootstrap.min.css';
 import './App.css';
 
@@ -20,6 +21,7 @@ class App extends Component {
     renderMediaPage = router => {
         const { data } = this.state;
         const media = data.media.find(media => media.id === router.match.params.id)
+        pageView(media.title, router.location.pathname);
         return <Media media={media} data={this.state.data}/>;
     }
 
