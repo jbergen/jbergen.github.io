@@ -9,11 +9,14 @@ const sitemapArray = [];
 sitemapArray.push('<?xml version="1.0" encoding="UTF-8"?>');
 sitemapArray.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">');
 
+let nodeCount = 0;
+
 data.pages.forEach(page => {
     if (!page.hide_in_nav) {
         sitemapArray.push('  <url>');
         sitemapArray.push(`    <loc>${baseURL}${page.name}</loc>`)
         sitemapArray.push('  </url>');
+        nodeCount++;
 
         if (page.name === 'home') {
             page.media.forEach(mediaId => {
@@ -26,6 +29,7 @@ data.pages.forEach(page => {
                     sitemapArray.push(`      <image:title>${media.title}</image:title>`)
                     sitemapArray.push(`    </image:image>`)
                     sitemapArray.push('  </url>');
+                    nodeCount++;
                 }
             });
         }
@@ -37,23 +41,16 @@ data.posts.forEach(post => {
         sitemapArray.push('  <url>');
         sitemapArray.push(`    <loc>${baseURL}work/${post.name}</loc>`)
         sitemapArray.push('  </url>');
+        nodeCount++;
     }
 });
 
 sitemapArray.push('</urlset>');
-
-
-
-// console.log(data.pages);
-
-// console.log("Output Content : \n"+ data);
-// console.log("\n *EXIT* \n");
-
 
 fs.writeFile("public/sitemap.xml", sitemapArray.join('\r\n'), err => {
     if (err) {
         return console.log(err);
     }
 
-    console.log("The file was saved!");
+    console.log(`Sitemap Created. Published ${nodeCount} nodes`);
 }); 
