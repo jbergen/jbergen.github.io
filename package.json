@@ -20,9 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
     "sitemap": "node scripts/generateSitemap.js",
     "deploy": "gh-pages -b master -d build",
+    "prepublish": "npm run build",
     "publish": "npm run sitemap && npm run deploy"
   }
 }
