@@ -44,8 +44,9 @@ Website
 ```
 add to scripts:
 ```
-"predeploy": "npm run build",
-"deploy": "gh-pages -b master -d build"
+"deploy": "gh-pages -b master -d build",
+"prepublish": "npm run build",
+"publish": "npm run sitemap && npm run deploy"
 ```
 2. If needed `npm -i gh-pages --save-dev`
 3. Duplicate master branch to another branch (e.g. `source`) and change the primary branch to that from `master`.
@@ -53,6 +54,9 @@ add to scripts:
 5. `npm run publish`
 6. Published!
 
+# Sitemap
+
+sitemap auto generated using custom schema. `scripts/generateSitemap.js` must be updated when deploying to another URL.
 
 ## Single Page App & Routing
 
