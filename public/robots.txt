@@ -1,1 +1,1 @@
-sitemap: http://jbergen.github.io/sitemap.xml
+sitemap: https://jbergen.github.io/sitemap.xml

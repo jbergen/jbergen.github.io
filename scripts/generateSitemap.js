@@ -1,4 +1,4 @@
-const baseURL = 'http://jbergen.github.io/';
+const baseURL = 'https://jbergen.github.io/';
 
 // Read Synchrously
 const fs = require("fs");
