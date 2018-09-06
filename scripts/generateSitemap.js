@@ -38,8 +38,9 @@ const addImageMedia = (sitemap, mediaProvider) => {
 // parse through each page
 data.pages.forEach(page => {
     if (page.hide_in_nav) { return; }
+    let pageName = page.name === 'home' ? '' : page.name;
     sitemapArray.push('<url>');
-    sitemapArray.push(`<loc>${baseURL}${page.name}</loc>`);
+    sitemapArray.push(`<loc>${baseURL}${pageName}</loc>`);
     addImageMedia(sitemapArray, page);
     sitemapArray.push('</url>');
     nodeCount++;
