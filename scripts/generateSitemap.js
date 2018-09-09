@@ -51,7 +51,7 @@ data.posts.forEach(post => {
     if (!post.visible) { return; } // skip if post is hidden
     if (!post.media) { return; } // skip if post has no media
     sitemapArray.push('<url>');
-    sitemapArray.push(`<loc>${baseURL}work/${post.name}</loc>`);
+    sitemapArray.push(`<loc>${baseURL}work/${post.slug}</loc>`);
     addImageMedia(sitemapArray, post);
     sitemapArray.push('</url>');
     nodeCount++;

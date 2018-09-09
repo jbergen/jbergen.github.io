@@ -7,6 +7,8 @@
       "name": "home",
       "body": "",
       "media": [
+        "codetalker",
+        "crazyhorse",
         "indiancentaur",
         "generalcrook",
         "lakotawomen",
@@ -725,6 +727,25 @@
     {
       "filename": "pastel00.jpg",
       "id": "pastel00"
+    },
+    {
+      "filename": "codetalker.jpg",
+      "title": "Code Talker",
+      "year": "2018",
+      "media": "Oil on Canvas",
+      "dimension": "48\" x 36\"",
+      "tags": [
+        "Oil"
+      ],
+      "id": "codetalker"
+    },
+    {
+      "filename": "crazyhorse.jpg",
+      "title": "Crazy Horse Reenactment",
+      "id": "crazyhorse",
+      "year": "2018",
+      "media": "Oil on Canvas",
+      "dimension": "30\" x 40\""
     }
   ]
 }
