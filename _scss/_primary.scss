@@ -1,0 +1,16 @@
+.container {
+    margin-top: 50px;
+    margin-bottom: 20px
+}
+
+.width-constrained {
+    width: 70%;
+    max-width: 650px;
+}
+
+@media only screen and (orientation: portrait) {
+    .width-constrained {
+        width: 100%;
+        max-width: 100%;
+    }
+}

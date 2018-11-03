@@ -1,1 +1,0 @@
-sitemap: https://jbergen.github.io/sitemap.xml

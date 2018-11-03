@@ -1,0 +1,41 @@
+---
+layout: master
+page_type: work
+---
+
+<div class="page-content">
+    <div class="page-image width-constrained">
+        {% for image in page.images %}
+            <img src="/media/{{ image }}"
+                alt="{{ page.title }}, {{ page.media }}, {{ page.year }}"/>
+        {% endfor %} 
+    </div>
+    <div class="page-body width-constrained">
+        <i>{{ page.title }}</i>
+        <br/>
+        {{ page.media}} / {{ page.dimension}} / {{ page.year }}
+        <br/><br/>
+        {{ page.price }}
+        <br/><br/>
+        {{ content }}        
+    </div>
+    <div class="work-nav">
+        {% assign prev_index = page.ordinal | plus: 1 %}
+        {% assign next_index = page.ordinal | minus: 1 %}
+        {% assign prev_work = site.work | where_exp: 'item', "item.ordinal == prev_index" %}
+        {% assign next_work = site.work | where_exp: 'item', "item.ordinal == next_index" %}
+        {% assign prev = prev_work[0] %}
+        {% assign next = next_work[0] %}
+
+        {% if prev %}
+            <a href="{{ prev.url }}">prev</a>
+            {% if next %}
+                /
+            {% endif %}
+        {% endif %}
+
+        {% if next %}
+            <a href="{{ next.url }}">next</a>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,30 @@
+---
+<!-- layout: compress -->
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% include meta-tags.html %}
+        <link rel="canonical" href="{{ site.url }}" />
+        <script type="application/ld+json">
+            {
+                "name": "{{ site.title }}",
+                "description":"{{ page_desc }}",
+                "@type": "WebSite",
+                "url": "{{ site.url }}",
+                "headline": "{{ site.title }}",
+                "@context":"http://schema.org"
+            }
+        </script>
+        <link rel="stylesheet" href="/css/style.css">
+        {% include google-analytics.html %}
+    </head>
+    <body>
+        {% include header.html %}
+        <div class="container">{{ content }}</div>
+    </body>
+</html>

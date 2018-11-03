@@ -1,0 +1,40 @@
+header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+      
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+      
+    li {
+        display: inline-block;
+        height: 100%;
+        float: left;
+    }
+      
+    li a {
+        display: inline-block;
+        padding: 15px 10px;
+        background: white;
+    }
+      
+    li a.selected {
+        background: transparent;
+    }
+      
+    li.end-tab {
+        padding: 15px 10px;
+        width: 100%;
+        position: absolute;
+        background: white;
+    }
+      
+    li:first-child a {
+        padding-left: 20px;
+    }
+}

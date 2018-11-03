@@ -1,0 +1,15 @@
+---
+layout: master
+---
+
+<div class="page-content">
+    <div class="page-image width-constrained">
+        {% for image in page.images %}
+            <img src="/media/{{ image }}" alt="bio image"/>
+        {% endfor %}
+    </div>
+    <div class="page-body width-constrained">
+        {{ page.body | markdownify }}
+    </div>
+</div>
+    

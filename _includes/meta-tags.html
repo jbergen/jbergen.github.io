@@ -1,0 +1,37 @@
+{% assign short_page_title = site.title %}
+{% if page.layout == "artwork" %}
+    {% assign short_page_title = page.title | append: " / " | append: site.name %}
+{% endif %}
+
+{% assign page_title = site.title %}
+{% if page.layout == "artwork" %}
+    {% assign page_title = page.title | append: " / " | append: page.media | append: page.dimension | append: " / " | append: site.name | escape %}
+{% endif %}
+
+{% assign page_desc = site.description %}
+{% if page.layout == "artwork" %}
+    {% assign page_desc = page.type | append: ": " | append: page.title | append: " / " | append: page.media | append: " / " | append: page.dimension | append: " / " | append: page.year | escape %}
+    {% if page.description %}
+        {% assign page_desc = page_desc | append: " / " | append: page.description  %}
+    {% endif %}
+    {% assign page_desc = page_desc | append: " / " | append: site.name %}
+{% endif %}
+
+<title>{{ short_page_title }}</title>
+<meta name="description" content="{{ page_desc }}" />
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="{{ site.url }}" />
+<meta property="og:site_name" content="{{ site.title }}" />
+
+<meta property="og:title" content="{{ page_title }}" />
+<meta property="og:description" content="{{ page_desc }}" />
+
+{% if page.images[0] %}
+<meta property="og:image" content="{{ site.url }}/media/{{ page.images[0] }}">
+<meta name="twitter:image" content=" {{ site.url }}/media/{{ page.images[0] }}">
+{% endif %}
+
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_desc }}">
+<meta name="twitter:card" content="summary_large_image">
