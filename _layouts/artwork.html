@@ -22,8 +22,8 @@ page_type: work
     <div class="work-nav">
         {% assign prev_index = page.ordinal | plus: 1 %}
         {% assign next_index = page.ordinal | minus: 1 %}
-        {% assign prev_work = site.work | where_exp: 'item', "item.ordinal == prev_index" %}
-        {% assign next_work = site.work | where_exp: 'item', "item.ordinal == next_index" %}
+        {% assign prev_work = site.artwork | where_exp: 'item', "item.ordinal == prev_index" %}
+        {% assign next_work = site.artwork | where_exp: 'item', "item.ordinal == next_index" %}
         {% assign prev = prev_work[0] %}
         {% assign next = next_work[0] %}
 
