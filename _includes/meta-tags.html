@@ -8,10 +8,10 @@
     {% assign page_title = page.title | append: " / " | append: page.media | append: page.dimension | append: " / " | append: site.name | escape %}
 {% endif %}
 
-{% assign social_image = page.images[0] %}
+{% assign social_image = "" | append: site.url | append: "/media/" | append: page.images[0] %}
 {% if page.layout == 'media_grid' %}
     {% assign site_work = site.artwork | where_exp: 'item', "item.hide != true"  | sort: 'ordinal' | reverse %}
-    {% assign social_image = site_work[0].url %}
+    {% assign social_image = site.url | append: "/media/" | append: site_work[0].images[0] %}
 {% endif %}
 
 {% assign page_desc = site.description %}
@@ -33,8 +33,8 @@
 <meta property="og:title" content="{{ page_title }}" />
 <meta property="og:description" content="{{ page_desc }}" />
 
-<meta property="og:image" content="{{ site.url }}/media/{{ social_image }}">
-<meta name="twitter:image" content="{{ site.url }}/media/{{ social_image }}">
+<meta property="og:image" content="{{ social_image }}">
+<meta name="twitter:image" content="{{ social_image }}">
 
 <meta name="twitter:title" content="{{ page_title }}">
 <meta name="twitter:description" content="{{ page_desc }}">
