@@ -9,29 +9,47 @@ header {
         padding: 0;
         margin: 0;
         list-style: none;
+        display: flex;
     }
       
     li {
         display: inline-block;
         height: 100%;
-        float: left;
     }
       
     li a {
         display: inline-block;
         padding: 15px 10px;
         background: white;
+
+        svg {
+            height: 20px;
+            width: 20px;
+            
+            .nav-svg-icon {
+                fill: #777;
+                -webkit-transition: fill 0.2s;
+                transition: fill 0.2s;
+            }
+
+            &:hover {
+                .nav-svg-icon {
+                    fill: #222;
+                    -webkit-transition: fill 0.2s;
+                    transition: fill 0.2s;
+                }
+            }
+        }
     }
       
     li a.selected {
         background: transparent;
     }
       
-    li.end-tab {
+    li.flex-filler {
         padding: 15px 10px;
-        width: 100%;
-        position: absolute;
         background: white;
+        flex-grow: 2;
     }
       
     li:first-child a {
