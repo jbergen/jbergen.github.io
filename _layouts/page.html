@@ -3,13 +3,13 @@ layout: master
 ---
 
 <div class="page-content">
-    <div class="page-image width-constrained">
+    <figure class="page-image width-constrained">
         {% for image in page.images %}
             <img src="/media/{{ image }}" alt="bio image"/>
         {% endfor %}
-    </div>
-    <div class="page-body width-constrained">
+    </figure>
+    <section class="page-body width-constrained">
         {{ page.body | markdownify }}
-    </div>
+    </section>
 </div>
     
