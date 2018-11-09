@@ -18,7 +18,7 @@ name: Joseph Bergen
 email: jbergen@gmail.com
 description: Portfolio for the Native American artist Joseph Bergen
 baseurl: "" # the subpath of your site, e.g. /blog
-url: http://www.josephbergen.com # the base hostname & protocol for your site, e.g. http://example.com
+url: https://www.josephbergen.com # the base hostname & protocol for your site, e.g. http://example.com
 site_image: indian-centaur_joseph-bergen.jpg
 twitter_username: jbergen
 instagram_username: jbergen
