@@ -4,12 +4,12 @@ header {
     left: 0;
     top: 0;
     z-index: 999;
+    display: flex;
       
     nav {
         padding: 0;
         margin: 0;
         list-style: none;
-        display: flex;
     }
       
     a, span {

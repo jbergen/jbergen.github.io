@@ -1,5 +1,5 @@
 <header>
-    <nav class="main-nav">
+    <nav>
         {% for pageNav in site.data.navigation %}   
             {% if pageNav[1].link == page.url %}             
                 <a
@@ -18,7 +18,7 @@
                 </a>
             {% endif %}
         {% endfor %}
-        <span class="flex-filler">&nbsp;</span>
-        {% include social-head-items.html %}
     </nav>
+    <span class="flex-filler">&nbsp;</span>
+    {% include social-head-items.html %}
 </header>
