@@ -1,28 +1,24 @@
 <header>
     <nav class="main-nav">
-        <ul>
-            {% for pageNav in site.data.navigation %}   
-                <li>
-                    {% if pageNav[1].link == page.url %}             
-                    <a
-                        title="{{ pageNav[1].title }}"
-                        class="selected"
-                        href="{{ pageNav[1].link }}"
-                    >
-                        {{ pageNav[1].title }}
-                    </a>
-                {% else %}
-                    <a
-                        title="{{ pageNav[1].title }}"
-                        href="{{ pageNav[1].link }}"
-                    >
-                        {{ pageNav[1].title }}
-                    </a>
-                {% endif %}
-                </li>
-            {% endfor %}
-            <li class="flex-filler">&nbsp;</li>
-            {% include social-head-items.html %}
-        </ul>
+        {% for pageNav in site.data.navigation %}   
+            {% if pageNav[1].link == page.url %}             
+                <a
+                    title="{{ pageNav[1].title }}"
+                    class="selected"
+                    href="{{ pageNav[1].link }}"
+                >
+                    {{ pageNav[1].title }}
+                </a>
+            {% else %}
+                <a
+                    title="{{ pageNav[1].title }}"
+                    href="{{ pageNav[1].link }}"
+                >
+                    {{ pageNav[1].title }}
+                </a>
+            {% endif %}
+        {% endfor %}
+        <span class="flex-filler">&nbsp;</span>
+        {% include social-head-items.html %}
     </nav>
 </header>

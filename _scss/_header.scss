@@ -5,58 +5,54 @@ header {
     top: 0;
     z-index: 999;
       
-    ul {
+    nav {
         padding: 0;
         margin: 0;
         list-style: none;
         display: flex;
     }
       
-    li {
+    a, span {
         display: inline-block;
         height: 100%;
-    }
-      
-    li a {
         display: inline-block;
         padding: 15px 10px;
         background: white;
 
-        &.nav-icon {
-            padding: 11px 10px;
+        &.selected {
+            background: transparent;
         }
 
-        svg {
-            height: 23px;
-            width: 23px;
-            
-            .nav-svg-icon {
-                fill: #999;
-                -webkit-transition: fill 0.2s;
-                transition: fill 0.2s;
-            }
-
-            &:hover {
+        &.nav-icon {
+            padding: 11px 10px;
+            svg {
+                height: 23px;
+                width: 23px;
+                
                 .nav-svg-icon {
-                    fill: #222;
+                    fill: #999;
                     -webkit-transition: fill 0.2s;
                     transition: fill 0.2s;
                 }
-            }
+    
+                &:hover {
+                    .nav-svg-icon {
+                        fill: #222;
+                        -webkit-transition: fill 0.2s;
+                        transition: fill 0.2s;
+                    }
+                }
+            }   
         }
     }
       
-    li a.selected {
-        background: transparent;
-    }
-      
-    li.flex-filler {
+    .flex-filler {
         padding: 15px 10px;
         background: white;
         flex-grow: 2;
     }
       
-    li:first-child a {
+    :first-child a {
         padding-left: 20px;
     }
 }
