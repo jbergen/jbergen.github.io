@@ -4,9 +4,20 @@
             {% for pageNav in site.data.navigation %}   
                 <li>
                     {% if pageNav[1].link == page.url %}             
-                    <a class="selected" href="{{ pageNav[1].link }}">{{ pageNav[1].title }}</a>
+                    <a
+                        title="{{ pageNav[1].title }}"
+                        class="selected"
+                        href="{{ pageNav[1].link }}"
+                    >
+                        {{ pageNav[1].title }}
+                    </a>
                 {% else %}
-                    <a href="{{ pageNav[1].link }}">{{ pageNav[1].title }}</a>
+                    <a
+                        title="{{ pageNav[1].title }}"
+                        href="{{ pageNav[1].link }}"
+                    >
+                        {{ pageNav[1].title }}
+                    </a>
                 {% endif %}
                 </li>
             {% endfor %}
