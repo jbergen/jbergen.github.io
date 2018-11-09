@@ -2,14 +2,17 @@
 layout: master
 ---
 
-<ul class="media-grid">
+<div class="media-grid">
     {% assign site_work = site.artwork | where_exp: 'item', "item.hide != true"  | sort: 'ordinal' | reverse %}
     {% for work in site_work %}
-        <li>
-            <a title="{{ work.title }}" href="{{ work.url }}"/>
-                <img src="/media/{{ work.images[0] }}"
-                    alt="{{ work.title }}, {{ work.media }}, {{ work.year }}"/>
-            </a>
-        </li>
+        <a
+            title="{{ work.title }}"
+            href="{{ work.url }}"
+        >
+            <img
+                src="/media/{{ work.images[0] }}"
+                alt="{{ work.title }}, {{ work.media }}, {{ work.year }}"
+            />
+        </a>
     {% endfor %}
-</ul>
+</div>
