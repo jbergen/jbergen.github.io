@@ -9,9 +9,13 @@
 {% endif %}
 
 {% assign social_image = "" | append: site.url | append: "/media/" | append: page.images[0] %}
-{% if page.layout == 'media_grid' %}
-    {% assign site_work = site.artwork | where_exp: 'item', "item.hide != true"  | sort: 'ordinal' | reverse %}
-    {% assign social_image = site.url | append: "/media/" | append: site_work[0].images[0] %}
+{% if page.title == 'home' %}
+    {% assign social_image = "" | append: site.url | append: "/media/" | append: site.site_image %}
+{% else %}
+    {% if page.layout == 'media_grid' %}
+        {% assign site_work = site.artwork | where_exp: 'item', "item.hide != true"  | sort: 'ordinal' | reverse %}
+        {% assign social_image = site.url | append: "/media/" | append: site_work[0].images[0] %}
+    {% endif %}
 {% endif %}
 
 {% assign page_desc = site.description %}
