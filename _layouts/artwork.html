@@ -19,7 +19,7 @@ page_type: work
         <br/><br/>
         {{ content }}        
     </section>
-    <nav class="work-nav">
+    <nav class="work-nav"  role="navigation">
         {% assign prev_index = page.ordinal | plus: 1 %}
         {% assign next_index = page.ordinal | minus: 1 %}
         {% assign prev_work = site.artwork | where_exp: 'item', "item.ordinal == prev_index" %}
