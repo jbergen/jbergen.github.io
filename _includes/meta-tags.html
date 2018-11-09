@@ -1,6 +1,6 @@
 {% assign short_page_title = site.title %}
 {% if page.layout == "artwork" %}
-    {% assign short_page_title = page.title | append: " / " | append: site.name %}
+    {% assign short_page_title = '"' | append: page.title | append: '" / ' | append: site.name | append: " / " | append: page.type %}
 {% endif %}
 
 {% assign page_title = site.title %}
@@ -20,7 +20,7 @@
 
 {% assign page_desc = site.description %}
 {% if page.layout == "artwork" %}
-    {% assign page_desc = page.type | append: ": " | append: page.title | append: " / " | append: page.media | append: " / " | append: page.dimension | append: " / " | append: page.year | escape %}
+    {% assign page_desc = page.type | append: ': "' | append: page.title | append: '" / ' | append: page.media | append: " / " | append: page.dimension | append: " / " | append: page.year | escape %}
     {% if page.description %}
         {% assign page_desc = page_desc | append: " / " | append: page.description  %}
     {% endif %}
