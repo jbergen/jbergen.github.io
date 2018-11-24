@@ -1,7 +1,7 @@
 ---
 layout: master
 ---
-foobar
+
 <div class="media-grid">
     {% assign site_work = site.artwork | where_exp: 'item', "item.hide != true"  | sort: 'ordinal' | reverse %}
     {% for work in site_work %}
