@@ -3,7 +3,7 @@ layout: master
 page_type: work
 ---
 
-<div class="page-content">
+<div id="swipable-page" class="page-content">
     <figure class="page-image width-constrained">
         {% for image in page.images %}
             <img src="/media/{{ image }}"
@@ -27,7 +27,14 @@ page_type: work
         {% assign prev = prev_work[0] %}
         {% assign next = next_work[0] %}
 
+        <script>
+            window.siteData = {};
+        </script>
+
         {% if prev %}
+            <script>
+                window.siteData.prevURL = "{{ prev.url }}";
+            </script>
             <a title="previous" href="{{ prev.url }}">prev</a>
             {% if next %}
                 /
@@ -35,6 +42,9 @@ page_type: work
         {% endif %}
 
         {% if next %}
+            <script>
+                window.siteData.nextURL = "{{ next.url }}";
+            </script>
             <a title="next" href="{{ next.url }}">next</a>
         {% endif %}
     </nav>
