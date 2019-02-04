@@ -56,9 +56,9 @@ class JBergen {
             e.preventDefault()
         }, false)
     
-        touchsurface.addEventListener('touchmove', e => {
-            e.preventDefault() // prevent scrolling when inside DIV
-        }, false)
+        // touchsurface.addEventListener('touchmove', e => {
+        //     e.preventDefault() // prevent scrolling when inside DIV
+        // }, false)
     
         touchsurface.addEventListener('touchend', e => {
             var touchobj = e.changedTouches[0]
