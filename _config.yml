@@ -40,7 +40,7 @@ defaults:
 collections:
   artwork:
     output: true
-permalink: pretty
+permalink: /:categories/:title/
 
 compress_html:
   clippings: all
