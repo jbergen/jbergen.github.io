@@ -6,11 +6,18 @@ class JBergen {
     startMasonry() {
         var mql = window.matchMedia('(orientation: portrait)');
 
-        imagesLoaded( document.querySelector('.media-grid'), instance => {
-            let options = this.masonryOptions(mql.matches);
-            this.masonry = new Masonry('.media-grid', options);
+        // setup initial Masonry object
+        let options = this.masonryOptions(mql.matches);
+        this.masonry = new Masonry('.media-grid', options);
+
+        // call layout after each image loads.
+        // this prevents broken layouts on slow connections
+        let loader = imagesLoaded(document.querySelectorAll('.grid-item'));
+        loader.on('progress', (instance, image) => {
+            this.masonry.layout();
         });
 
+        // listen to changes in screensize and adjust masonry accordingly
         mql.addListener(e => {
             this.masonry.destroy()
             let options = this.masonryOptions(e.matches);
