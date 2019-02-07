@@ -20,32 +20,25 @@ page_type: work
         {{ content }}        
     </section>
     <nav class="work-nav"  role="navigation">
-        {% assign prev_index = page.ordinal | plus: 1 %}
-        {% assign next_index = page.ordinal | minus: 1 %}
-        {% assign prev_work = site.artwork | where_exp: 'item', "item.ordinal == prev_index" %}
-        {% assign next_work = site.artwork | where_exp: 'item', "item.ordinal == next_index" %}
-        {% assign prev = prev_work[0] %}
-        {% assign next = next_work[0] %}
-
         <script>
             window.siteData = {};
         </script>
 
-        {% if prev %}
+        {% if page.previous.url %}
             <script>
-                window.siteData.prevURL = "{{ prev.url }}";
+                window.siteData.prevURL = "{{ page.previous.url }}";
             </script>
-            <a title="previous" href="{{ prev.url }}">prev</a>
-            {% if next %}
+            <a title="previous" href="{{ page.previous.url }}">prev</a>
+            {% if page.next.url %}
                 /
             {% endif %}
         {% endif %}
 
-        {% if next %}
+        {% if page.next.url %}
             <script>
-                window.siteData.nextURL = "{{ next.url }}";
+                window.siteData.nextURL = "{{ page.next.url }}";
             </script>
-            <a title="next" href="{{ next.url }}">next</a>
+            <a title="next" href="{{ page.next.url }}">next</a>
         {% endif %}
     </nav>
 </div>

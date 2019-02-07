@@ -1,10 +1,12 @@
 class JBergen {
     constructor() {
-        // detect if is mobile page
-        // let el = document.getElementById('swipable-page');
-        // if (el && this.isMobile) {
-        //     this.swipeDetect(el, this.onSwipe);
-        // }
+        this.startMasonry();
+    }
+
+    startMasonry() {
+        this.masonry = new Masonry( '.media-grid', {
+            columnWidth: 120,
+        });
     }
 
     onSwipe(direction) {

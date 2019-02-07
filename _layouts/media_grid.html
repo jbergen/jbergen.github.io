@@ -3,9 +3,16 @@ layout: master
 ---
 
 <div class="media-grid">
-    {% assign site_work = site.artwork | where_exp: 'item', "item.hide != true"  | sort: 'ordinal' | reverse %}
     {% for post in site.posts %}
+
+    {% if post.grid_size %}
+        {% assign grid_size = "size-" | append: post.grid_size %}
+    {% else %}
+        {% assign grid_size = "size-default" %}
+    {% endif %}
+
         <a
+            class="grid-item {{ grid_size }}"
             title="{{ post.title }}"
             href="{{ post.url }}"
         >
@@ -16,3 +23,6 @@ layout: master
         </a>
     {% endfor %}
 </div>
+
+<script src="/assets/js/vendor/masonry.min.js"></script>
+<script src="/assets/js/main.js"></script>
