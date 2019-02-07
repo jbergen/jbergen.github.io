@@ -1,45 +1,35 @@
-$column-width: 200px;
-$column-gutter: 20px;
+$column-width: 100px;
+$column-gutter: 10px;
+
+.container.grid-container {
+    width: 100%;
+}
 
 .media-grid {
     list-style: none;
-    padding: 10px;
     width: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
 
     a {
         &.size-small {
-            height: $column-width;
             width: $column-width;
         }
         &.size-default {
-            height: $column-width * 2 + $column-gutter;
             width: $column-width * 2 + $column-gutter;
         }
         &.size-large {
-            height: $column-width * 3 + $column-gutter * 2;
             width: $column-width * 3 + $column-gutter * 2;
         }
         &.size-xlarge {
-            height: $column-width * 4 + $column-gutter * 4;
-            width: $column-width * 4 + $column-gutter * 4;
+            width: $column-width * 4 + $column-gutter * 3;
         }
 
-
-        // height: 200px;
-        // width: 200px;
         float: left;
-        position: relative;
-        margin: $column-gutter / 2;
+        margin-bottom: 10px;
         -webkit-transition: opacity 0.2s;
         transition: opacity 0.2s;
-
-        // &:first-child {
-        //     height: 420px;
-        //     width: 420px;
-        // }
 
         &:hover {
             opacity: 0.75;
@@ -49,29 +39,24 @@ $column-gutter: 20px;
 
         img {
             max-width: 100%;
-            max-height: 100%;
             margin: auto;
             display: block;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
-            position: absolute;
+            width: 100%;
         }
     }
 }
 
 @media only screen and (orientation: portrait) {
     .media-grid a {
-        height: auto;
-        width: calc(50% - 20px);
-        padding-bottom: calc(50% - 20px);
-        float: left;
-        position: relative;
-        margin: 10px;
-
-        &:first-child {
-            width: calc(100% - 20px);
+        &.size-small, &.size-default {
+            width: calc(50% - 5px);
+        }
+        &.size-large, &.size-xlarge {
+            width: 100%;
         }
     }
 }

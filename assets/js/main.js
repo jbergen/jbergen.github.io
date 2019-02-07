@@ -4,9 +4,34 @@ class JBergen {
     }
 
     startMasonry() {
-        this.masonry = new Masonry( '.media-grid', {
-            columnWidth: 120,
+        var mql = window.matchMedia('(orientation: portrait)');
+
+        imagesLoaded( document.querySelector('.media-grid'), instance => {
+            let options = this.masonryOptions(mql.matches);
+            this.masonry = new Masonry('.media-grid', options);
         });
+
+        mql.addListener(e => {
+            this.masonry.destroy()
+            let options = this.masonryOptions(e.matches);
+            this.masonry = new Masonry('.media-grid', options);
+        })
+    }
+
+    masonryOptions(isMobile) {
+        if (isMobile) {
+            return {
+                percentPosition: true,
+                columnWidth: '.size-small',
+                gutter: 10,
+            }
+        } else {
+            return {
+                horizontalOrder: false,
+                columnWidth: 100,
+                gutter: 10,
+            }
+        }
     }
 
     onSwipe(direction) {
