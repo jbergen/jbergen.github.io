@@ -24,12 +24,11 @@ layout: compress
         {% include google-analytics.html %}
     </head>
     <body>
-        {% if page.layout == "media_grid" %}
-            {% assign container_class = "grid-container" %}
-        {% else %}
-
-        {% endif %}
         {% include header.html %}
-        <div class="container {{ container_class }}">{{ content }}</div>
+        <div class="container layout-{{ page.layout }}">{{ content }}</div>
+
+        <script src="/assets/js/vendor/imagesloaded.min.js"></script>
+        <script src="/assets/js/vendor/masonry.min.js"></script>
+        <script src="/assets/js/main.js"></script>
     </body>
 </html>

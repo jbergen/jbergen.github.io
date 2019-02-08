@@ -1,8 +1,10 @@
 $column-width: 100px;
 $column-gutter: 10px;
 
-.container.grid-container {
-    width: 100%;
+.container {
+    &.layout-media_grid {
+        width: 100%;
+    }
 }
 
 .media-grid {
@@ -12,7 +14,7 @@ $column-gutter: 10px;
     left: 0;
     right: 0;
 
-    a {
+    .grid-item {
         &.column-width-1 {
             width: $column-width;
         }
@@ -52,7 +54,7 @@ $column-gutter: 10px;
 }
 
 @media only screen and (orientation: portrait) {
-    .media-grid a {
+    .media-grid .grid-item {
         &.column-width-1, &.column-width-2, &.column-width-default {
             width: calc(50% - 5px);
         }

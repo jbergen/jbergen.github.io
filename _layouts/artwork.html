@@ -3,14 +3,14 @@ layout: master
 page_type: work
 ---
 
-<div id="swipable-page" class="page-content">
-    <figure class="page-image width-constrained">
+<div class="page-content media-grid">
+    <figure class="page-image width-constrained grid-item column-width-4">
         {% for image in page.images %}
             <img src="/media/{{ image }}"
                 alt="{{ page.title }}, {{ page.media }}, {{ page.date | date: "%Y" }}"/>
         {% endfor %} 
     </figure>
-    <section class="page-body width-constrained">
+    <section class="page-body width-constrained grid-item column-width-4">
         <h1>{{ page.title }}</h1>
         <br/>
         {{ page.media}} / {{ page.dimension}} / {{ page.date | date: "%Y" }}
@@ -19,26 +19,20 @@ page_type: work
         <br/><br/>
         {{ content }}        
     </section>
-    <nav class="work-nav"  role="navigation">
-        <script>
-            window.siteData = {};
-        </script>
 
-        {% if page.previous.url %}
-            <script>
-                window.siteData.prevURL = "{{ page.previous.url }}";
-            </script>
-            <a title="previous" href="{{ page.previous.url }}">prev</a>
-            {% if page.next.url %}
-                /
-            {% endif %}
-        {% endif %}
+    {% if page.next.url %}
+        <a class="grid-item column-width-1" title="next" href="{{ page.next.url }}">
+            Newer: {{ page.next.title }}
+            <img src="/media/{{ page.next.images[0] }}"
+                alt="{{ page.next.title }}, {{ page.next.media }}, {{ page.next.date | date: "%Y" }}"/>
+        </a>
+    {% endif %}
 
-        {% if page.next.url %}
-            <script>
-                window.siteData.nextURL = "{{ page.next.url }}";
-            </script>
-            <a title="next" href="{{ page.next.url }}">next</a>
-        {% endif %}
-    </nav>
+    {% if page.previous.url %}
+        <a class="grid-item column-width-1" title="previous" href="{{ page.previous.url }}">
+            Older: {{ page.previous.title }}
+            <img src="/media/{{ page.previous.images[0] }}"
+                alt="{{ page.previous.title }}, {{ page.previous.media }}, {{ page.previous.date | date: "%Y" }}"/>
+        </a>
+    {% endif %}
 </div>
