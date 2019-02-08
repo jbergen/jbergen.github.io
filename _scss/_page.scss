@@ -15,6 +15,16 @@
     }
 }
 
+a {
+    .chevron {
+        opacity: 0.4;
+    }
+
+    &:hover .chevron {
+        opacity: 0.8;
+    }
+}
+
 .chevron {
     position: absolute;
     margin: auto;
