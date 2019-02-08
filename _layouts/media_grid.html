@@ -5,14 +5,14 @@ layout: master
 <div class="media-grid">
     {% for post in site.posts %}
 
-    {% if post.grid_size %}
-        {% assign grid_size = "size-" | append: post.grid_size %}
+    {% if post.column_width %}
+        {% assign column_width = "column-width-" | append: post.column_width %}
     {% else %}
-        {% assign grid_size = "size-default" %}
+        {% assign column_width = "column-width-default" %}
     {% endif %}
 
         <a
-            class="grid-item {{ grid_size }}"
+            class="grid-item {{ column_width }}"
             title="{{ post.title }}"
             href="{{ post.url }}"
         >

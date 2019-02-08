@@ -13,19 +13,20 @@ $column-gutter: 10px;
     right: 0;
 
     a {
-        &.size-small {
+        &.column-width-1 {
             width: $column-width;
         }
-        &.size-default {
+        &.column-width-default, &.column-width-2 {
             width: $column-width * 2 + $column-gutter;
         }
-        &.size-large {
+        &.column-width-3 {
             width: $column-width * 3 + $column-gutter * 2;
         }
-        &.size-xlarge {
+        &.column-width-4 {
             width: $column-width * 4 + $column-gutter * 3;
         }
 
+        position: relative;
         float: left;
         margin-bottom: 10px;
         -webkit-transition: opacity 0.2s;
@@ -52,10 +53,10 @@ $column-gutter: 10px;
 
 @media only screen and (orientation: portrait) {
     .media-grid a {
-        &.size-small, &.size-default {
+        &.column-width-1, &.column-width-2, &.column-width-default {
             width: calc(50% - 5px);
         }
-        &.size-large, &.size-xlarge {
+        &.column-width-3, &.column-width-4 {
             width: 100%;
         }
     }

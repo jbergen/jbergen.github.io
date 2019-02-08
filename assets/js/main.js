@@ -9,7 +9,7 @@ class JBergen {
         // setup initial Masonry object
         let options = this.masonryOptions(mql.matches);
         this.masonry = new Masonry('.media-grid', options);
-
+console.log("OPT", options)
         // call layout after each image loads.
         // this prevents broken layouts on slow connections
         let loader = imagesLoaded(document.querySelectorAll('.grid-item'));
@@ -29,7 +29,7 @@ class JBergen {
         if (isMobile) {
             return {
                 percentPosition: true,
-                columnWidth: '.size-small',
+                columnWidth: '.column-width-1',
                 gutter: 10,
             }
         } else {
