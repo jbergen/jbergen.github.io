@@ -27,6 +27,12 @@ $column-gutter: 10px;
         &.column-width-4 {
             width: $column-width * 4 + $column-gutter * 3;
         }
+        &.column-width-5 {
+            width: $column-width * 5 + $column-gutter * 4;
+        }
+        &.column-width-6 {
+            width: $column-width * 6 + $column-gutter * 5;
+        }
 
         position: relative;
         float: left;
@@ -58,7 +64,7 @@ $column-gutter: 10px;
         &.column-width-1, &.column-width-2, &.column-width-default {
             width: calc(50% - 5px);
         }
-        &.column-width-3, &.column-width-4 {
+        &.column-width-3, &.column-width-4, &.column-width-5, &.column-width-6 {
             width: 100%;
         }
     }
