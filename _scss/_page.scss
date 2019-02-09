@@ -16,13 +16,12 @@
 }
 
 a {
-
     &.nav-thumb {
         width: 100px;
         border-radius: 100%;
         background-size: cover;
         height: 100px;
-        
+
         @media only screen and (orientation: portrait) {
             height: auto;
             padding-bottom: 50%;
