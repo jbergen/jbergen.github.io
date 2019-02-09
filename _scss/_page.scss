@@ -16,12 +16,31 @@
 }
 
 a {
+
+    &.nav-thumb {
+        width: 100px;
+        border-radius: 100%;
+        background-size: cover;
+        height: 100px;
+        
+        @media only screen and (orientation: portrait) {
+            height: auto;
+            padding-bottom: 50%;
+        }
+    }
+
     .chevron {
-        opacity: 0.4;
+        opacity: 0.7;
     }
 
     &:hover .chevron {
-        opacity: 0.8;
+        opacity: 1;
+    }
+
+    @media only screen and (orientation: portrait) {
+        .chevron {
+            opacity: 0.9;
+        }
     }
 }
 
@@ -40,7 +59,8 @@ a {
         right: 0;
         top: 0;
         bottom: 0;
-        opacity: 0.8;
+        max-height: 50%;
+        max-width: 50%;
     }
 
     &.chevron-right svg {

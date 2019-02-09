@@ -21,22 +21,28 @@ page_type: work
     </section>
 
     {% if page.next.url %}
-        <a class="grid-item column-width-1" title="next" href="{{ page.next.url }}">
+        <a class="grid-item column-width-1 nav-thumb"
+            title="next"
+            href="{{ page.next.url }}"
+            style="background-image: url(/media/{{ page.next.images[0] }})"
+        >
             <span class="chevron chevron-left">
                 {% include svg/chevron-left.svg %}
             </span>
-            <img src="/media/{{ page.next.images[0] }}"
-                alt="{{ page.next.title }}, {{ page.next.media }}, {{ page.next.date | date: "%Y" }}"/>
         </a>
+    {% else %}
+        <div class="grid-item column-width-1">&nbsp;</div>
     {% endif %}
 
     {% if page.previous.url %}
-        <a class="grid-item column-width-1" title="previous" href="{{ page.previous.url }}">
+        <a class="grid-item column-width-1 nav-thumb"
+            title="previous"
+            href="{{ page.previous.url }}"
+            style="background-image: url(/media/{{ page.previous.images[0] }})"
+        >
             <span class="chevron chevron-right">
                 {% include svg/chevron-left.svg %}
             </span>
-            <img src="/media/{{ page.previous.images[0] }}"
-                alt="{{ page.previous.title }}, {{ page.previous.media }}, {{ page.previous.date | date: "%Y" }}"/>
         </a>
     {% endif %}
 </div>
