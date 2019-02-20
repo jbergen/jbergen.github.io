@@ -1,0 +1,3 @@
+#!/bin/bash
+scripts/bootstrap.sh
+bundle exec jekyll serve
