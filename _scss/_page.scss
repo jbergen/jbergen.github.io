@@ -15,6 +15,12 @@
     }
 }
 
+.nav-thumb:hover {
+    opacity: 0.75;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+
 a {
     &.nav-thumb {
         width: 100px;
