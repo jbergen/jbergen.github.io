@@ -2,15 +2,20 @@
 echo "bootstrap website"
 
 echo "removing old thumbnails"
-rm -rf thumbnails_large
-rm -rf thumbnails_small
+rm -rf assets/img
 
 echo "creating new thumb folders"
-cp -R media thumbnails_large
-cp -R media thumbnails_small
+mkdir assets/img
+cp -R media assets/img/display
+cp -R media assets/img/thumbnails_large
+cp -R media assets/img/thumbnails_small
+
+echo "resizing display"
+cd assets/img/display
+mogrify -resize '1200x1200^' *.jpg
 
 echo "resizing large"
-cd thumbnails_large
+cd ../thumbnails_large
 mogrify -resize '500x500^' *.jpg
 
 echo "resizing small"

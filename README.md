@@ -32,7 +32,9 @@ Website
 ## Development
 
 ### Startup
-- `bundle exec jekyll serve`
+
+- `./scripts/start` bootstraps images and starts server
+- `/scripts/bootstrap.sh` bootstraps images
 
 ## Running as gh-page
 

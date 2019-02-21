@@ -7,17 +7,22 @@ layout: master
 
     {% if post.column_width %}
         {% assign column_width = "column-width-" | append: post.column_width %}
+        {% if post.column_width < 3 %}
+        {% assign thumb_size = "small" %}
+        {% else %}
+        {% assign thumb_size = "large" %}
+        {% endif %}
     {% else %}
         {% assign column_width = "column-width-default" %}
+        {% assign thumb_size = "small" %}
     {% endif %}
-
         <a
             class="grid-item {{ column_width }}"
             title="{{ post.title }}"
             href="{{ post.url }}"
         >
             <img
-                src="/thumbnails_large/{{ post.images[0] }}"
+                src="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}"
                 alt="{{ post.title }}, {{ post.media }}, {{ post.year }}"
             />
         </a>

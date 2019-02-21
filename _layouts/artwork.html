@@ -6,7 +6,7 @@ page_type: work
 <div class="page-content media-grid">
     <figure class="page-image width-constrained grid-item column-width-6">
         {% for image in page.images %}
-            <img src="/media/{{ image }}"
+            <img src="/assets/img/display/{{ image }}"
                 alt="{{ page.title }}, {{ page.media }}, {{ page.date | date: "%Y" }}"/>
         {% endfor %} 
     </figure>
@@ -24,7 +24,7 @@ page_type: work
         <a class="grid-item column-width-1 nav-thumb"
             title="next"
             href="{{ page.next.url }}"
-            style="background-image: url(/media/{{ page.next.images[0] }})"
+            style="background-image: url(/assets/img/thumbnails_small/{{ page.next.images[0] }})"
         >
             <span class="chevron chevron-left">
                 {% include svg/chevron-left.svg %}
@@ -38,7 +38,7 @@ page_type: work
         <a class="grid-item column-width-1 nav-thumb"
             title="previous"
             href="{{ page.previous.url }}"
-            style="background-image: url(/media/{{ page.previous.images[0] }})"
+            style="background-image: url(/assets/img/thumbnails_small/{{ page.previous.images[0] }})"
         >
             <span class="chevron chevron-right">
                 {% include svg/chevron-left.svg %}
