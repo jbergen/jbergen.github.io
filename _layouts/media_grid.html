@@ -21,10 +21,14 @@ layout: master
             title="{{ post.title }}"
             href="{{ post.url }}"
         >
-            <img
-                src="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}"
-                alt="{{ post.title }}, {{ post.media }}, {{ post.year }}"
-            />
+            <picture>
+                <source srcset="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}.webp" type="image/webp">
+                <source srcset="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}.jpg" type="image/jpeg">
+                <img
+                    src="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}.jpg"
+                    alt="{{ post.title }}, {{ post.media }}, {{ post.year }}"
+                />
+            </picture>
         </a>
     {% endfor %}
 </div>

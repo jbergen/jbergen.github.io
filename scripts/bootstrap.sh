@@ -12,12 +12,21 @@ cp -R media assets/img/thumbnails_small
 
 echo "resizing display"
 cd assets/img/display
-mogrify -resize '1200x1200^' *.jpg
+mogrify -resize '1200x1200^' -format webp *.jpg
+mogrify -resize '1200x1200^' -format webp *.png
+# rm *.jpg
+# rm *.png
 
 echo "resizing large"
 cd ../thumbnails_large
-mogrify -resize '500x500^' *.jpg
+mogrify -resize '500x500^' -format webp *.jpg
+mogrify -resize '500x500^' -format webp *.png
+# rm *.jpg
+# rm *.png
 
 echo "resizing small"
 cd ../thumbnails_small
-mogrify -resize '250x250^' *.jpg
+mogrify -resize '250x250^' -format webp *.jpg
+mogrify -resize '250x250^' -format webp *.png
+# rm *.jpg
+# rm *.png

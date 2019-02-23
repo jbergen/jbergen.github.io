@@ -5,7 +5,11 @@ layout: master
 <div class="page-content">
     <figure class="page-image width-constrained">
         {% for image in page.images %}
-            <img src="/assets/img/display/{{ image }}" alt="bio image"/>
+            <picture>
+                <source srcset="/assets/img/display/{{ image }}.webp" type="image/webp">
+                <source srcset="/assets/img/display/{{ image }}.jpg" type="image/jpeg">
+                <img src="/assets/img/display/{{ image }}.webp" alt="bio image"/>
+            </picture>
         {% endfor %}
     </figure>
     <section class="page-body width-constrained">
