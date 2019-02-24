@@ -24,6 +24,8 @@ class JBergen {
             let options = this.masonryOptions(e.matches);
             this.masonry = new Masonry('.media-grid', options);
         })
+
+        this.masonry.layout();
     }
 
     masonryOptions(isMobile) {
