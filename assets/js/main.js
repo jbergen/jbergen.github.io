@@ -25,7 +25,7 @@ class JBergen {
             this.masonry = new Masonry('.media-grid', options);
         })
 
-        this.masonry.layout();
+        setTimeout(this.masonry.layout, 1000);
     }
 
     masonryOptions(isMobile) {
