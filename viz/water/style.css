@@ -1,0 +1,26 @@
+#wrapper {
+	margin:0 auto;
+	width:1200px;
+	padding-top:10px;
+}
+#flashContent {
+	width:1200px;
+	height:750px;
+}
+
+#content{
+	overflow:hidden;
+}
+.column {
+	float:left;
+	width:595px;
+	margin:10px 0;
+}
+
+.column + .column{
+	margin-left:10px;
+}
+
+#credits, #sources{
+	clear:both;
+}

@@ -32,11 +32,7 @@ plugins:
   - jekyll-sitemap
 sass:
   sass_dir: ./_scss
-defaults:
-  - scope:
-      path: "media"
-    values:
-      image: true
+
 collections:
   artwork:
     output: true

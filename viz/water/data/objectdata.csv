@@ -1,0 +1,54 @@
+BEVERAGES,LITERS WATER
+glass of beer,300
+malt beverages,50
+glass of water,1
+bottled water,3.5
+milk,1000
+milk (processing),7
+cup of coffee,1120
+cup of tea,120
+glass of wine,960
+glass of apple juice,950
+glass of orange juice,850
+
+PRODUCED GOODS PER KG,LITERS WATER
+roasted coffee,21000
+tea,9200
+bread,1300
+cheese,5000
+cotton textile finished,11000
+sheet paper,125
+potato chips,925
+hamburger,16000
+leather shoes,16600
+microchip,16000
+
+CROPS PER KG,LITERS WATER
+barley,1300
+coconut,2500
+corn,900
+sugar,1500
+apple,700
+potato,500 - 1500
+wheat,900 - 2000 
+alfalfa,900 - 2000
+sorghum,1100 - 1800
+corn / maize,1000 - 1800
+rice,1900 - 5000
+soybean,1100 - 2000
+
+ANIMALS PER KG OF MEAT,LITERS WATER
+sheep,6100
+goat,4000
+beef,15000 - 70000
+chicken,3500 - 5700
+eggs,3300
+
+INDUSTRIAL PRODUCTS,LITERS WATER
+steel,260
+primary copper,440
+primary aluminum,410
+phosphatic fertilizer,150
+nitrogenous fertilizer,120
+synthetic rubber,460
+inorganic pigments,410
