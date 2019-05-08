@@ -35,6 +35,8 @@ Website
 
 - `./scripts/start` bootstraps images and starts server
 - `/scripts/bootstrap.sh` bootstraps images
+- `bundle exec jekyll serve` starts server without bootstrapping
+
 
 ## Running as gh-page
 
