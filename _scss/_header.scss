@@ -15,13 +15,24 @@ header {
             float: left;
         }
     }
+
+    @media (prefers-color-scheme: dark) {
+        a, span, .flex-filler {
+            background: black;
+        }
+    }
+      
+    @media (prefers-color-scheme: light) {
+        a, span, .flex-filler {
+            background: white;
+        }
+    }
       
     a, span {
         display: inline-block;
         height: 100%;
         display: inline-block;
         padding: 15px 10px;
-        background: white;
 
         &.selected {
             background: transparent;
@@ -52,7 +63,6 @@ header {
       
     .flex-filler {
         padding: 15px 10px;
-        background: white;
         flex-grow: 2;
     }
       

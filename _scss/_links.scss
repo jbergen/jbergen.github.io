@@ -1,7 +1,19 @@
-a {
-    color: #777;
+@media (prefers-color-scheme: dark) {
+    a {
+        color: #ccc;
+    }
+      
+    a:focus, a:hover {
+        color: #ccc;
+    }
 }
   
-a:focus, a:hover {
-    color: #222;
+@media (prefers-color-scheme: light) {
+    a {
+        color: #777;
+    }
+      
+    a:focus, a:hover {
+        color: #222;
+    }
 }
