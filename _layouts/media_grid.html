@@ -4,20 +4,25 @@ layout: master
 
 <div class="media-grid">
     {% for post in site.posts %}
-
-    {% if post.column_width %}
-        {% assign column_width = "column-width-" | append: post.column_width %}
-        {% if post.column_width < 3 %}
-        {% assign thumb_size = "small" %}
+        {% if page.force_grid_size %}
+            {% assign grid_size = page.force_grid_size %}
         {% else %}
-        {% assign thumb_size = "large" %}
+            {% if post.column_width %}
+                {% assign grid_size = post.column_width %}
+            {% else %}
+                {% assign grid_size = 2 %}
+            {% endif %}
         {% endif %}
-    {% else %}
-        {% assign column_width = "column-width-default" %}
-        {% assign thumb_size = "small" %}
-    {% endif %}
+
+        {% assign masonry-column-class = "column-width-" | append: grid_size %}
+        {% if grid_size < 3 %}
+            {% assign thumb_size = "small" %}
+        {% else %}
+            {% assign thumb_size = "large" %}
+        {% endif %}
+    
         <a
-            class="grid-item {{ column_width }}"
+            class="grid-item {{ masonry-column-class }}"
             title="{{ post.title }}"
             href="{{ post.url }}"
         >
@@ -31,4 +36,5 @@ layout: master
             </picture>
         </a>
     {% endfor %}
+    <span class="grid-item column-width-1"></span>
 </div>

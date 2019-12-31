@@ -1,10 +1,12 @@
 class JBergen {
     constructor() {
-        console.log("✨🚀🌝✨");
+        console.log(`👋`);
         this.startMasonry();
     }
 
     startMasonry() {
+        if (document.querySelector('.media-grid') == null) return;
+        
         var mql = window.matchMedia('(orientation: portrait)');
 
         // setup initial Masonry object

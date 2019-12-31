@@ -7,7 +7,7 @@ sitemap:
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     {% for page in site.html_pages %}
-    {% unless page.sitemap.exclude == "yes" or page.url == "/404.html" %}
+    {% unless page.sitemap.exclude == "yes" or page.url == "/404.html" or page.index == false %}
     <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         {% if page.date %}

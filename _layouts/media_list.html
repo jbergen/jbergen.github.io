@@ -1,0 +1,55 @@
+---
+layout: master
+---
+
+<div class="container">
+    {% for post in site.posts %}
+        {% unless page.status_filter and post.status.availability != page.status_filter %}
+
+            {% if page.force_grid_size %}
+                {% assign grid_size = page.force_grid_size %}
+            {% else %}
+                {% if post.column_width %}
+                    {% assign grid_size = post.column_width %}
+                {% else %}
+                    {% assign grid_size = 2 %}
+                {% endif %}
+            {% endif %}
+
+            {% assign masonry-column-class = "column-width-" | append: grid_size %}
+            {% if grid_size < 3 %}
+                {% assign thumb_size = "small" %}
+            {% else %}
+                {% assign thumb_size = "large" %}
+            {% endif %}
+        
+            <div class="row mb-3">
+                <div class="col-sm-3">
+                    <a
+                        class=""
+                        title="{{ post.title }}"
+                        href="{{ post.url }}"
+                    >
+                        <picture>
+                            <source srcset="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}.webp" type="image/webp">
+                            <source srcset="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}.jpg" type="image/jpeg">
+                            <img
+                                src="/assets/img/thumbnails_{{ thumb_size }}/{{ post.images[0] }}.jpg"
+                                alt="{{ post.title }}, {{ post.media }}, {{ post.year }}"
+                            />
+                        </picture>
+                    </a>
+                </div>
+                <div class="col-sm-9">
+                    <h4>{{ post.title }}</h4>
+                    <br/>
+                    {{ post.media}} / {{ post.dimension}} / {{ post.date | date: "%Y" }}
+                    <br/><br/>
+                    ${{ post.status.price }}
+                    <br/><br/>
+                    {{ content }}
+                </div>
+            </div>
+        {% endunless %}
+    {% endfor %}
+</div>
