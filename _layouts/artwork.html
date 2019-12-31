@@ -26,7 +26,7 @@ page_type: work
     </section>
 
     {% if page.next.url %}
-        <a class="grid-item column-width-1 nav-thumb"
+        <a class="grid-item column-width-1 nav-thumb no-print"
             title="next"
             href="{{ page.next.url }}"
             style="background-image: url(/assets/img/thumbnails_small/{{ page.next.images[0] }}.jpg)"
@@ -40,7 +40,7 @@ page_type: work
     {% endif %}
 
     {% if page.previous.url %}
-        <a class="grid-item column-width-1 nav-thumb"
+        <a class="grid-item column-width-1 nav-thumb no-print"
             title="previous"
             href="{{ page.previous.url }}"
             style="background-image: url(/assets/img/thumbnails_small/{{ page.previous.images[0] }}.jpg)"
