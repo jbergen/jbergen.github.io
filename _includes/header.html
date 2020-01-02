@@ -1,22 +1,21 @@
 <header>
     <nav role="navigation">
-        {% for pageNav in site.data.navigation %}   
-            {% if pageNav[1].link == page.url %}             
-                <a
-                    title="{{ pageNav[1].title }}"
-                    class="selected"
-                    href="{{ pageNav[1].link }}"
-                >
-                    {{ pageNav[1].title }}
-                </a>
-            {% else %}
-                <a
-                    title="{{ pageNav[1].title }}"
-                    href="{{ pageNav[1].link }}"
-                >
-                    {{ pageNav[1].title }}
-                </a>
-            {% endif %}
+        {% for site_nav_key in site.navigation %}
+            {% for _page in site.pages %}
+                {% unless _page.title != site_nav_key %}
+                    {% assign nav_class = "" %}
+                    {% if page.url == _page.url or _page.url == "/" and page.url contains "artwork/"" %}
+                        {% assign nav_class = "selected" %}
+                    {% endif %}
+                    <a
+                        title="{{ _page.title }}"
+                        href="{{ _page.url }}"
+                        class="{{ nav_class }}"
+                    >
+                        {{ _page.title }}
+                    </a>
+                {% endunless %}
+            {% endfor %}
         {% endfor %}
     </nav>
     <span class="flex-filler">&nbsp;</span>

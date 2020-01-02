@@ -31,6 +31,11 @@ theme: minima
 sass:
   sass_dir: ./_scss
 
+navigation:
+  - Joseph Bergen
+  - Bio
+  - Exhibitions
+
 collections:
   artwork:
     output: true
