@@ -40,6 +40,29 @@ collections:
     output: true
 permalink: /:categories/:title/
 
+price_schedule:
+  tier_1: 100
+  tier_2: 125
+  tier_3: 150
+  tier_4: 200
+  tier_5: 250
+  tier_6: 300
+  tier_7: 400
+  tier_8: 500
+  tier_9: 600
+  tier_10: 700
+  tier_11: 750
+  tier_12: 800
+  tier_13: 1000
+  tier_14: 1250
+  tier_15: 1500
+  tier_16: 1750
+  tier_17: 2000
+  tier_18: 2500
+  tier_19: 3000
+  tier_20: 4000
+  tier_21: 5000
+
 compress_html:
   clippings: all
   comments: [""]

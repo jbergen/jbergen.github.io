@@ -45,7 +45,18 @@ layout: master
                     <br/>
                     {{ post.media}} / {{ post.dimension}} / {{ post.date | date: "%Y" }}
                     <br/><br/>
-                    ${{ post.status.price }}
+                    {% assign divisor = 1 %}
+                    {% if page.price_divisor %}
+                        {% assign divisor = page.price_divisor %}
+                    {% endif %}
+
+                    {% if page.price_schedule[post.status.price] %}
+                        ${{ page.price_schedule[post.status.price] | divided_by: divisor }}
+                    {% elsif site.price_schedule[post.status.price] %}
+                        ${{ site.price_schedule[post.status.price] | divided_by: divisor }}
+                    {% else %}
+                        ${{ post.status.price | divided_by: divisor }}
+                    {% endif %}
                     <br/><br/>
                     {{ content }}
                 </div>
