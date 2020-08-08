@@ -80,3 +80,13 @@ a {
         transform: rotate(180deg);             /* W3C compliant browsers */
     }
 }
+
+.red-dot {
+    background: #c4261b;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    border-radius: 10px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
