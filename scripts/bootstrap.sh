@@ -9,6 +9,7 @@ generate () {
     cp -R media $SUB_DIR
     cd $SUB_DIR
     mogrify -resize $2 -format jpg *.png
+    mogrify -resize $2 *.jpg
     mogrify -resize $2 -quality 60 -format webp *.jpg
     rm *.png
     cd ../../..
